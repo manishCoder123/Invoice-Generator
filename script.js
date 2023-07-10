@@ -1,8 +1,8 @@
 // Create Dynamic Form
 
-const addBtn = document.querySelector(".btn");
+const addBtn = document.querySelector(".add");
 
-const input = document.querySelector("inp-group");
+const input = document.querySelector(".inp-group");
 
 function removeInput(){
     this.parentElement.remove();
@@ -39,7 +39,10 @@ function addInput(){
     flex.appendChild(rate);
     flex.appendChild(qty);
     flex.appendChild(amount);
+    flex.appendChild(btn);
 }
 
 
 addBtn.addEventListener("click", addInput);
+
+btn.addEventListener("click", removeInput);

@@ -120,9 +120,6 @@ hr .line1{
 
 /* InvoiceDetails */
 
-.invoiceDetailsSection{
-
-}
 
 .invoiceLogoDetails{
     width: 100%;
@@ -206,7 +203,6 @@ hr .line1{
     margin: 10px;
     background-color: #c0c0c0;
     border-radius: 8px;
-    width: 100%;
     padding: 10px;
   }
 
@@ -235,7 +231,6 @@ hr .line1{
 
 .flex{
     display: flex;
-    gap: 1.5em;
     margin-bottom: 15px;
 }
 
@@ -243,7 +238,7 @@ hr .line1{
     text-decoration: none;
     display: inline-block;
     background-color: #c0c0c0;
-    color: #fff;
+    color: #71606e;
     font-size: 1.5rem;
     font-weight: bold;
     width: 20px;
