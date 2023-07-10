@@ -1,78 +1,256 @@
-body{
-    display: flex;
-    align-items: stretch;
+.mainContainet{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(234, 232, 232);
     font-family: 'poppins';
-    height: auto;
-    background-color: #c0c0c0;
 }
 
-
-/* firts_container CSS*/
-.first_Containet{
-    display: flex;
-    position: relative;
-    width: 100%;
-    height: 90vh;
-    background-color: #fff;
-    margin-top: 30px;
-    margin-left: 50px;
-    margin-right: 50px;
+.secondContainer{
+    padding-top: 50px;
 }
-.second_container{
-    width: 100%;
-}
+/* navigation_div CSS */
 
-/* black_div CSS */
-
-.black_div{
+.navigationDiv{
     display: flex;
     height: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
     background-color: #1f1f1f;
-    color: #fff;
+    border-radius: 5px 5px 0 0;
     align-items: center;
-    justify-content: space-between;
-    border-radius: 6px 6px 0 0;
 }
+
+.logo_div img{
+    height: 25px;
+}
+.button{
+    margin-right: 20px;
+}
+.button img{
+    height: 15px;
+}
+.navigationDiv{
+    display: flex;
+    color: #fff;
+    justify-content: space-between;
+}
+
 .logo_div{
     display: flex;
     align-items: center;
-    width: 9%;
+    width: 8%;
     justify-content: space-between;
-    margin-left: 25px;
+    margin-left: 20px;
 }
-.logo_div img{
-    height: 30px;
-}
-.logo_div h6{
-    display: flex;
-    align-items: center;
+.logo_div span{
     font-size: 13px;
-}
-.uplod_btn img{
-    height: 15px;
-}
-.button{
-    display: flex;
-    align-items: center;
-    width: 19%;
-    justify-content: space-between;
-    margin-right: 10px;
+    font-weight: 600;
 }
 .btn{
-    height: 25px;
-    background-color: #00bdfe;
-    display: flex;
-    align-items: center;
-    padding: 19px;
-    border-radius: 5px;
-}
-.button a{
-    font-size: 11px;
+    border-radius: 5px solid;
+    background-color: aliceblue;
     text-decoration: none;
     color: #fff;
+    font-size: 11px;
+    font-weight: 500;
 }
-.uplod_btn {
+.generate_btn{
+    background-color: rgb(58, 104, 242);
+}
+.uplod_btn{
+    background-color: rgb(63, 61, 61);
+}
+.uplod_btn a{
+    margin-left: 3px;
+}
+.button a{
+    color: #fff;
+    text-decoration: none;
+}
+
+/* invocie CSS */
+
+.invocie{
+    display: flex;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.trustScore{
+    background-color: #fff;
+}
+.scoreCard{
     display: flex;
     justify-content: space-between;
-    background-color: #1a1110;
+    height: 60px;
+    align-items: center;
+    border-bottom: 2px solid #e4e1e1;
+    padding-bottom: 10px;
+}
+.trustPercentage{
+    width: 45px;
+    height: 45px;
+    border: 5px solid yellow;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+}
+.scoreTitle{
+    line-height: 0px;
+    padding-bottom: 5px;
+    margin-left: 10px;
+}
+.scoreTitleh4{
+    font-size: 15px;
+    font-weight: 900;
+}
+.scoreTitle span{
+    font-size: 11px;
+    font-weight: 500;
+}
+.trustPercentage span{
+    font-size: 13px;
+    font-weight: 800;
+}
+hr .line1{
+    border: 1px solid pink;
+}
+
+
+/* InvoiceDetails */
+
+.invoiceDetailsSection{
+
+}
+
+.invoiceLogoDetails{
+    width: 100%;
+    padding: 10px;
+    display: flex;
+}
+.invoiceLogo, .invoiceNumber{
+    width: 50%;
+}
+.invocieInput input{
+    width: 97%;
+    height: 70px;
+    border-radius: 8px;
+    border: 1px solid;
+}
+.invoiceInput input{
+    width: 97%;
+    height: 40px;
+    border-radius: 8px;
+    border: 1px solid;
+}
+.invoiceLogoDetails label{
+    margin-bottom: 10px;
+}
+
+/* invoiceComapnySection */
+
+.invoiceComapnySection{
+    width: 100%;
+    padding: 10px;
+    display: flex;
+}
+.invoiceCompanyDetails, .invocieBillDetails{
+    width: 50%;
+}
+.invoiceComapnyInput input, .invoiceBillInput input{
+    width: 97%;
+    height: 80px;
+    border-radius: 8px;
+    border: 1px solid;
+}
+.invoiceComapnySection label{
+    margin-bottom: 10px;
+}
+
+/* InvoiceDateSection */
+
+.invocieDateSection{
+    width: 100%;
+    padding: 10px;
+    display: flex;
+}
+
+.invocieDateIssued, .invocieDateDue{
+    width: 50%
+}
+.invoiceDateIssuedInput textarea, .invoiceDateDueInput text{
+    width: 97%;
+    height: 40px;
+    border-radius: 8px;
+    border: 1px solid;
+}
+
+.invoiceDetailsSection label{
+    font-size: 13px;
+    color: #c0c0c0;
+    font-weight: 500;
+}
+::placeholder {
+    color: #1f1f1f;
+    font-size: 11px;
+    font-weight: 800;
+    text-decoration: underline;
+    padding-left: 25px;
+  }
+
+
+  /* addInputSection CSS */
+  .addInputSection{
+    margin-top: 20px;
+    margin: 10px;
+    background-color: #c0c0c0;
+    border-radius: 8px;
+    width: 100%;
+    padding: 10px;
+  }
+
+  /* Button CSS */
+
+  .addBtn{
+    display: flex;
+    justify-content: center;
+  }
+
+  .add{
+    text-decoration: none;
+    display: flex;
+    width: 30px;
+    height: 30px;
+    background-color: rgb(58, 104, 242);
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+/* Dynamic Class Creation */
+
+.flex{
+    display: flex;
+    gap: 1.5em;
+    margin-bottom: 15px;
+}
+
+.delete{
+    text-decoration: none;
+    display: inline-block;
+    background-color: #c0c0c0;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    width: 20px;
+    height: 20px;
+    margin-left: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
 }
