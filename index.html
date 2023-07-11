@@ -74,7 +74,7 @@
                         <!--invoiceLogo-->
                         <div class="invoiceLogo">
                             <div class="invoiceLabel">
-                            <label for="">Logo</label>
+                            <label>Logo</label>
                         </div>
                         <div class="invocieInput">
                             <input type="text" placeholder="Upload File">
@@ -84,7 +84,7 @@
                         <!--invoiceNumber-->
                         <div class="invoiceNumber">
                             <div class="invoiceNumberLabel">
-                                <label for="">Invocie number</label>
+                                <label>Invocie number</label>
                             </div>
                             <div class="invoiceInput">
                                 <input type="text">
@@ -100,7 +100,7 @@
                     <!--invoiceCompanyDetails-->
                     <div class="invoiceCompanyDetails">
                         <div class="invoicedCompanyLabel">
-                            <label for="">Your comapny details</label>
+                            <label>Your comapny details</label>
                         </div>
                         <div class="invoiceComapnyInput">
                             <input type="text" name="" id="">
@@ -110,7 +110,7 @@
                     <!--invocieBillDetails-->
                     <div class="invocieBillDetails">
                         <div class="invocieBillLabel">
-                            <label for="">Bill to</label>
+                            <label>Bill to</label>
                         </div>
                         <div class="invoiceBillInput">
                             <input type="text">
@@ -126,7 +126,7 @@
                 <!--invocieDateIssued-->
                 <div class="invocieDateIssued">
                     <div class="invoiceDateIssuedLabel">
-                        <label for="">Date issued</label>
+                        <label>Date issued</label>
                     </div>
                     <div class="invoiceDateIssuedInput">
                         <input type="date">
@@ -136,7 +136,7 @@
                 <!--invocieDateDue-->
                 <div class="invocieDateDue">
                     <div class="invoiceDateDueLabel">
-                        <label for="">Due date</label>
+                        <label>Due date</label>
                     </div>
                     <div class="invoiceDateDueInput">
                         <input type="date" name="" id="">
@@ -145,20 +145,32 @@
                 <!--invocieDateDue-->
                 </div>
                 <!--InvoiceDateSection-->
-
                 </div>
                 <!--invoiceDetails-->
 
                 <!--Div for create input-->
-                <div class="addInputSection">
-                 <div class="inp-group">
-
+                <div class="addInputSection" id="addInputSection">
+                 <div class="row index-1" id="index-1">
+                    <div class="col-lg-4 col-4">
+                        <label>Item</label>
+                        <input type="text" name="" id="">
+                    </div>
+                    <div class="col-lg-3 col-3">
+                        <label>Rate</label>
+                        <input type="number" name="" id="">
+                    </div>
+                    <div class="col-lg-3 col-3">
+                        <label>Qty</label>
+                        <input type="number" name="" id="">
+                    </div>
+                    <div class="col-lg-2 col-2">
+                        <label>Amount</label>
+                        <input type="number" name="" id="">
+                    </div>
                  </div>
-                 <!--Div for create input-->
-
                  <!--Button for create more inputs-->
                  <div class="addBtn">
-                 <a href="" class="add">&plus;</a>
+                 <a href="" class="add" onclick="myFunction()">&plus;</a>
                 </div>
                  <!--Button for create more inputs-->
                 </div>
