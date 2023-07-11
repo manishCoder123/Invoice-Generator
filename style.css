@@ -1,6 +1,6 @@
 .mainContainet{
     width: 100%;
-    height: 100vh;
+    min-heightf: 100vh;
     background-color: rgb(234, 232, 232);
     font-family: 'poppins';
 }
@@ -176,7 +176,7 @@ hr .line1{
 .invocieDateIssued, .invocieDateDue{
     width: 50%
 }
-.invoiceDateIssuedInput textarea, .invoiceDateDueInput text{
+.invoiceDateIssuedInput input, .invoiceDateDueInput input{
     width: 97%;
     height: 40px;
     border-radius: 8px;
@@ -195,6 +195,9 @@ hr .line1{
     text-decoration: underline;
     padding-left: 25px;
   }
+.invocieDateSection label{
+    margin-bottom: 10px;
+}
 
 
   /* addInputSection CSS */
