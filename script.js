@@ -47,10 +47,10 @@
 
 // btn.addEventListener("click", removeInput);
 
-
+var flag = 0;
 function myFunction(){
-    debugger
-    const target = document.getElementById("index-1");
+    const target = document.getElementById("index");
     const copyElement = target.cloneNode(true);
-    document.getElementsById("addInputSection").appendChild(copyElement);
+    document.getElementById("addInputSection").appendChild(copyElement);
+    e.preventDefault();
 }
