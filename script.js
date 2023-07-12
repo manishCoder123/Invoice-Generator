@@ -49,7 +49,8 @@
 
 
 function myFunction(){
-    const node = document.getElementsByClassName("index-1");
-    const clone = node.cloneNode(true);
-    document.getElementsByClassName("addInputSection").appendChild(clone);
+    debugger
+    const target = document.getElementById("index-1");
+    const copyElement = target.cloneNode(true);
+    document.getElementsById("addInputSection").appendChild(copyElement);
 }

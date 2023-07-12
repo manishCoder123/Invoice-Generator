@@ -201,7 +201,7 @@ hr .line1{
 
 
   /* addInputSection CSS */
-  .addInputSection{
+  .addInputSection1111{
     margin-top: 20px;
     margin: 10px;
     background-color: #c0c0c0;
@@ -222,8 +222,8 @@ hr .line1{
     width: 30px;
     height: 30px;
     background-color: rgb(58, 104, 242);
-    font-size: 2rem;
-    font-weight: bold;
+    font-size: 18px;
+    font-weight: 400;
     color: #fff;
     justify-content: center;
     align-items: center;
