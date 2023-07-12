@@ -1,6 +1,6 @@
 .mainContainet{
     width: 100%;
-    min-heightf: 100vh;
+    min-height: 100vh;
     background-color: rgb(234, 232, 232);
     font-family: 'poppins';
 }
@@ -131,13 +131,13 @@ hr .line1{
 }
 .invocieInput input{
     width: 97%;
-    height: 70px;
+    height: 50px;
     border-radius: 8px;
     border: 1px solid;
 }
 .invoiceInput input{
     width: 97%;
-    height: 40px;
+    height: 35px;
     border-radius: 8px;
     border: 1px solid;
 }
@@ -157,7 +157,7 @@ hr .line1{
 }
 .invoiceComapnyInput input, .invoiceBillInput input{
     width: 97%;
-    height: 80px;
+    height: 50px;
     border-radius: 8px;
     border: 1px solid;
 }
@@ -178,13 +178,13 @@ hr .line1{
 }
 .invoiceDateIssuedInput input, .invoiceDateDueInput input{
     width: 97%;
-    height: 40px;
+    height: 30px;
     border-radius: 8px;
     border: 1px solid;
 }
 
 .invoiceDetailsSection label{
-    font-size: 13px;
+    font-size: 11px;
     color: #c0c0c0;
     font-weight: 500;
 }
