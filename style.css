@@ -201,7 +201,7 @@ hr .line1{
 
 
   /* addInputSection CSS */
-  .addInputSection1111{
+  .inputsTitle{
     margin-top: 20px;
     margin: 10px;
     background-color: #c0c0c0;
@@ -214,6 +214,7 @@ hr .line1{
   .addBtn{
     display: flex;
     justify-content: center;
+    margin-top: 20px;
   }
 
   .add{
@@ -251,4 +252,33 @@ hr .line1{
     justify-content: center;
     align-items: center;
     cursor: pointer;
+}
+.heading{
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+}
+.itemHeading{
+    display: flex;
+    width: 65%;
+    justify-content: space-between;
+}
+
+.indexInput{
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.removeBtn{
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #c0c0c0;
+    margin-top: 5px;
+}
+.removeBtn a{
+    text-decoration: none;
+    color: #404040;
 }

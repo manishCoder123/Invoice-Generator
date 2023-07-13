@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
@@ -8,7 +7,7 @@
     <!-- Bootstrap CSS v5.2.1 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-    <link href="index.css" rel="stylesheet">
+    <!-- <link href="index.css" rel="stylesheet"> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -47,133 +46,136 @@
                 <!--trustScore-->
                 <div class="col-lg-6 col-md-6 trustScore">
                     <!--scoreCard-->
-                <div class="scoreCard">
-                    <div class="scoreTitle">
-                        <h5>
-                            Trust Score
-                        </h5>
-                        <span>
-                            Needs improvement - See below to improvel
-                        </span>
+                    <div class="scoreCard">
+                        <div class="scoreTitle">
+                            <h5> Trust Score </h5>
+                            <span> Needs improvement - See below to improvel </span>
+                        </div>
+                        <div class="trustPercentage">
+                            <span> 75% </span>
+                        </div>
                     </div>
-                    <div class="trustPercentage">
-                        <span>
-                            75%
-                        </span>
-                    </div>
-                </div>
-                <!--scoreCard-->
-
-
-                
-                <!--invoiceDetails-->
-                <div class="invoiceDetailsSection">
-                    <!--invoiceLogoDetails-->
-                    <div class="invoiceLogoDetails">
-                        <!--invoiceLogo-->
-                        <div class="invoiceLogo">
-                            <div class="invoiceLabel">
-                            <label>Logo</label>
-                        </div>
-                        <div class="invocieInput">
-                            <input type="text" placeholder="Upload File">
-                        </div>
-                        </div>
-                        <!--invoiceLogo-->
-                        <!--invoiceNumber-->
-                        <div class="invoiceNumber">
-                            <div class="invoiceNumberLabel">
-                                <label>Invocie number</label>
+                    <!--scoreCard-->
+                    <!--invoiceDetails-->
+                    <div class="invoiceDetailsSection">
+                        <!--invoiceLogoDetails-->
+                        <div class="invoiceLogoDetails">
+                            <!--invoiceLogo-->
+                            <div class="invoiceLogo">
+                                <div class="invoiceLabel">
+                                    <label>Logo</label>
+                                </div>
+                                <div class="invocieInput">
+                                    <input type="text" placeholder="Upload File">
+                                </div>
                             </div>
-                            <div class="invoiceInput">
+                            <!--invoiceLogo-->
+                            <!--invoiceNumber-->
+                            <div class="invoiceNumber">
+                                <div class="invoiceNumberLabel">
+                                    <label>Invocie number</label>
+                                </div>
+                                <div class="invoiceInput">
+                                    <input type="text">
+                                </div>
+                            </div>
+                            <!--invoiceNumber-->
+                        </div>
+                        <!--invoiceLogoDetails-->
+                        <!--invoiceComapnySection-->
+                        <div class="invoiceComapnySection">
+                            <!--invoiceCompanyDetails-->
+                            <div class="invoiceCompanyDetails">
+                                <div class="invoicedCompanyLabel">
+                                    <label>Your comapny details</label>
+                                </div>
+                                <div class="invoiceComapnyInput">
+                                    <input type="text" name="" id="">
+                                </div>
+                            </div>
+                            <!--invoiceCompanyDetails-->
+                            <!--invocieBillDetails-->
+                            <div class="invocieBillDetails">
+                                <div class="invocieBillLabel">
+                                    <label>Bill to</label>
+                                </div>
+                                <div class="invoiceBillInput">
+                                    <input type="text">
+                                </div>
+                            </div>
+                            <!--invocieBillDetails-->
+                        </div>
+                        <!--invoiceComapnySection-->
+                        <!--InvoiceDateSection-->
+                        <div class="invocieDateSection">
+                            <!--invocieDateIssued-->
+                            <div class="invocieDateIssued">
+                                <div class="invoiceDateIssuedLabel">
+                                    <label>Date issued</label>
+                                </div>
+                                <div class="invoiceDateIssuedInput">
+                                    <input type="date">
+                                </div>
+                            </div>
+                            <!--invocieDateIssued-->
+                            <!--invocieDateDue-->
+                            <div class="invocieDateDue">
+                                <div class="invoiceDateDueLabel">
+                                    <label>Due date</label>
+                                </div>
+                                <div class="invoiceDateDueInput">
+                                    <input type="date" name="" id="">
+                                </div>
+                            </div>
+                            <!--invocieDateDue-->
+                        </div>
+                        <!--InvoiceDateSection-->
+                    </div>
+                    <!--invoiceDetails-->
+                    <!--Div for create input-->
+                    <div class="inputsTitle">
+                        <div class="heading">
+                            <div class="itemHeading">
+                            <span>
+                                Item
+                            </span>
+                            <span>
+                                Rate
+                            </span>
+                        </div>
+                            <span>
+                                Qty
+                            </span>
+                            <span>
+                                Amount
+                            </span>
+                        </div>
+                    <div class="container" id="addInputSection">
+                        <div class="indexInput" id="index">
+                            <div class="iteminput col-lg-4">
                                 <input type="text">
                             </div>
-                        </div>
-                        <!--invoiceNumber-->
-                    </div>
-                    <!--invoiceLogoDetails-->
-
-
-                    <!--invoiceComapnySection-->
-                    <div class="invoiceComapnySection">
-                    <!--invoiceCompanyDetails-->
-                    <div class="invoiceCompanyDetails">
-                        <div class="invoicedCompanyLabel">
-                            <label>Your comapny details</label>
-                        </div>
-                        <div class="invoiceComapnyInput">
-                            <input type="text" name="" id="">
+                            <div class="rateInput col-lg-2">
+                                <input type="text" name="" id="">
+                            </div>
+                            <div class="qtyInput col-lg-2">
+                                <input type="text" name="" id="">
+                            </div>
+                            <div class="amountInput col-lg-2">
+                                <input type="text" name="" id="">
+                            </div>
+                            <div class="removeBtn" >
+                                <a href="" id="id_remove"> X </a>
+                            </div>
                         </div>
                     </div>
-                    <!--invoiceCompanyDetails-->
-                    <!--invocieBillDetails-->
-                    <div class="invocieBillDetails">
-                        <div class="invocieBillLabel">
-                            <label>Bill to</label>
-                        </div>
-                        <div class="invoiceBillInput">
-                            <input type="text">
-                        </div>
+                    
+                    <!--Button for create more inputs-->
+                    <div class="addBtn">
+                        <a href="" id="id_add" class="add">&plus;</a>
                     </div>
-                    <!--invocieBillDetails-->
+                    <!--Button for create more inputs-->
                 </div>
-                <!--invoiceComapnySection-->
-
-                
-                <!--InvoiceDateSection-->
-                <div class="invocieDateSection">
-                <!--invocieDateIssued-->
-                <div class="invocieDateIssued">
-                    <div class="invoiceDateIssuedLabel">
-                        <label>Date issued</label>
-                    </div>
-                    <div class="invoiceDateIssuedInput">
-                        <input type="date">
-                    </div>
-                </div>
-                <!--invocieDateIssued-->
-                <!--invocieDateDue-->
-                <div class="invocieDateDue">
-                    <div class="invoiceDateDueLabel">
-                        <label>Due date</label>
-                    </div>
-                    <div class="invoiceDateDueInput">
-                        <input type="date" name="" id="">
-                    </div>
-                </div>
-                <!--invocieDateDue-->
-                </div>
-                <!--InvoiceDateSection-->
-                </div>
-                <!--invoiceDetails-->
-
-                <!--Div for create input-->
-                <div class="container" id="addInputSection">
-                 <div class="row" id="index">
-                    <div class="col">
-                        <span>Item</span>
-                        <input type="text" name="" id="">
-                    </div>
-                    <div class="col">
-                        <span>Rate</span>
-                        <input type="text" name="" id="">
-                    </div>
-                    <div class="col">
-                        <span>Qty</span>
-                        <input type="text" name="" id="">
-                    </div>
-                    <div class="col">
-                        <span>Amount</span>
-                        <input type="text" name="" id="">
-                    </div>
-                 </div>
-                 <!--Button for create more inputs-->
-                 <div class="addBtn">
-                 <a href="" id="id_add" onclick="myFunction()">&plus;</a>
-                </div>
-                 <!--Button for create more inputs-->
-                </div>
-
                 </div>
                 <!--trustScore-->
             </div>
@@ -183,9 +185,9 @@
     </div>
     <!--first_Containet-->
     <!--JavaScript Part-->
+    <script src="script.js">
 
-    <script type="" src="script.js"></script>
-
+    </script>
 </body>
 
 </html>

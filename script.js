@@ -1,56 +1,29 @@
-// // Create Dynamic Form
+function myFunction() {
+    var flag =1;
 
-// const addBtn = document.querySelector(".add");
+    document.getElementById("id_add").addEventListener("click", function (event) {
+     
+        //
+        const target = document.getElementById("index");
+        const copyElement = target.cloneNode(true);
+        copyElement.setAttribute("id", "index-" + (flag + 1))
+        document.getElementById("addInputSection").appendChild(copyElement);
+        flag++;
+        event.preventDefault();
+    });
 
-// const input = document.querySelector(".inp-group");
-
-// function removeInput(){
-//     this.parentElement.remove();
-// }
-
-// function addInput(){
-
-//     const item = document.createElement("input");
-//     item.type = "text";
-//     item.placeholder = "Enter the Item Name";
-
-//     const rate = document.createElement("input");
-//     rate.type = "Number";
-//     rate.placeholder = "Enter the Rate";
-
-//     const qty = document.createElement("input");
-//     qty.type = "Number";
-//     qty.placeholder = "Enter the Quantity";
-
-//     const amount = document.createElement("input");
-//     amount.type = "Number";
-//     amount.placeholder = "Enter the Amount";
-
-//     const btn = document.createElement("a");
-//     btn.className = "delete";
-//     btn.innerHTML = "&times";
-//     btn.addEventListener("click", removeInput);
-
-//     const flex = document.createElement("div");
-//     flex.className = "flex";
-
-//     input.appendChild(flex);
-//     flex.appendChild(item);
-//     flex.appendChild(rate);
-//     flex.appendChild(qty);
-//     flex.appendChild(amount);
-//     flex.appendChild(btn);
-// }
-
-
-// addBtn.addEventListener("click", addInput);
-
-// btn.addEventListener("click", removeInput);
-
-var flag = 0;
-function myFunction(){
-    const target = document.getElementById("index");
-    const copyElement = target.cloneNode(true);
-    document.getElementById("addInputSection").appendChild(copyElement);
-    e.preventDefault();
+    document.getElementById("id_remove").addEventListener("click", function(event){
+        var target = document.getElementById("index");
+        var rowCount = target.rows.length;
+        console.log("rowCount", rowCount);
+        if ( rowCount > '2'){
+            var row = target.deleteRow(rowCount-1);
+            rowCount--;
+        }
+        else{
+            alert('There should be atleast one row');
+        }
+        event.preventDefault();
+    });
 }
+myFunction();
