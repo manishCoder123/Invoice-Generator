@@ -1,3 +1,5 @@
+
+
 function myFunction() {
     var flag =1;
 
@@ -8,22 +10,22 @@ function myFunction() {
         const copyElement = target.cloneNode(true);
         copyElement.setAttribute("id", "index-" + (flag + 1))
         document.getElementById("addInputSection").appendChild(copyElement);
+
+        //<h4 id="id_remove" onclick="deleteRow(this)"> X </h4>
+
+        const createH4Element = document.createElement("h4");
+        createH4Element.setAttribute("onclick", "deleteRow(this)");
+        createH4Element.textContent = "X";
+        copyElement.appendChild(createH4Element);
+
         flag++;
         event.preventDefault();
     });
-
-    document.getElementById("id_remove").addEventListener("click", function(event){
-        var target = document.getElementById("index");
-        var rowCount = target.rows.length;
-        console.log("rowCount", rowCount);
-        if ( rowCount > '2'){
-            var row = target.deleteRow(rowCount-1);
-            rowCount--;
-        }
-        else{
-            alert('There should be atleast one row');
-        }
-        event.preventDefault();
-    });
 }
+
+function deleteRow(rowElementIndex){
+    var element = rowElementIndex.parentNode;
+    element.remove();
+}
+
 myFunction();
