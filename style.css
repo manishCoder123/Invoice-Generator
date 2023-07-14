@@ -129,17 +129,36 @@ hr .line1{
 .invoiceLogo, .invoiceNumber{
     width: 50%;
 }
-.invocieInput input{
+.invocieInput button{
     width: 97%;
     height: 50px;
     border-radius: 8px;
-    border: 1px solid;
+    border: 1px solid #c0c0c0;
+    text-align: start;
+    display: flex;
+    padding: 10px;
+    background-color: #fff;
+}
+.upload{
+    margin-left: 10px;
+}
+.upload a{
+    font-size: 13px;
+    color: #1f1f1f;
+    font-weight: 600;
+}
+.invocieInput img{
+    height: 15px;
+}
+.invocieInput p{
+    font-size: 11px;
+    color: #c0c0c0;
 }
 .invoiceInput input{
     width: 97%;
     height: 35px;
     border-radius: 8px;
-    border: 1px solid;
+    border: 1px solid #c0c0c0;
 }
 .invoiceLogoDetails label{
     margin-bottom: 10px;
@@ -155,18 +174,17 @@ hr .line1{
 .invoiceCompanyDetails, .invocieBillDetails{
     width: 50%;
 }
-.invoiceComapnyInput input, .invoiceBillInput input{
-    width: 97%;
-    height: 50px;
-    border-radius: 8px;
-    border: 1px solid;
-}
+
 .invoiceComapnySection label{
     margin-bottom: 10px;
 }
 
 /* InvoiceDateSection */
-
+.fristTwoInputs{
+    display: flex;
+    width: 75%;
+    justify-content: space-between;
+}
 .invocieDateSection{
     width: 100%;
     padding: 10px;
@@ -180,9 +198,13 @@ hr .line1{
     width: 97%;
     height: 30px;
     border-radius: 8px;
-    border: 1px solid;
+    border: 1px solid #c0c0c0;
+    padding: 10px;
 }
-
+.invocieDateSection input, input::placeholder{
+    font-size: 11px;
+    font-weight: 600;
+}
 .invoiceDetailsSection label{
     font-size: 11px;
     color: #c0c0c0;
@@ -298,11 +320,13 @@ hr .line1{
 .notesTitle{
    width: 50%;
 }
-.notesTitle input{
-    width: 100%;
-    height: 50px;
-    border-radius: 5px;
-    border: 1px solid;
+.notesTitle textarea{
+    width: 97%;
+    margin: 0;
+    padding: 8px;
+    box-shadow: none;
+    border-radius: 10px;
+    border: 1px solid #c0c0c0;
 }
 .notesTitleItem{
     margin: 10px;
@@ -336,9 +360,13 @@ hr .line1{
 }
 
 .subtotalTitleDiv input{
-    /* border: none; */
     margin-left: 20px;
     width: 150px;
+    border: 1px solid #c0c0c0;
+    border-radius: 5px;
+}
+.subtotalTitle input{
+    border: none;
 }
 
 .subtotalTitle span{
@@ -353,10 +381,15 @@ hr .line1{
     padding: 4px;
 }
 
-.invoiceComapnyInput textarea {
-    width: 100%;
+.invoiceComapnySection textarea {
+    width: 97%;
     margin:0;
     padding:8px;
     box-shadow:none;
     border-radius: 10px;
+    border: 1px solid #c0c0c0;
+}
+
+.iteminput{
+    width: 72%;
 }

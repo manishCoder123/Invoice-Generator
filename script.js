@@ -28,6 +28,7 @@ function myFunction() {
     });
 }
 
+
 function rateRow() {
 
 }
