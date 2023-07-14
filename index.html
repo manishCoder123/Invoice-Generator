@@ -22,6 +22,8 @@
 
 <body>
     <div class="mainContainet">
+
+        <!--secondContainer-->
         <div class="secondContainer">
             <!--navigation_div-->
             <div class="navigationDiv">
@@ -40,6 +42,7 @@
                 </div>
             </div>
             <!--navigation_div-->
+
             <!--invocie div-->
             <div class="invocie">
                 <div class="col-lg-6 col-md-6 invoiceDiv"></div>
@@ -154,7 +157,7 @@
                                     <input type="text" name="" id="">
                                 </div>
                                 <div class="amountInput col-lg-2">
-                                    <input type="text" name="" id="">
+                                    <input type="text" name="" id="" class="amount" onblur="findTotal()" value="$">
                                 </div>
                             
                             </div>
@@ -165,10 +168,52 @@
                         </div>
                         <!--Button for create more inputs-->
                     </div>
+
+                     <!--notesDiv-->
+                <div class="notesDiv">
+                    <div class="notesTitleItem">
+                        <div class="notesTitle">
+                            <span>Notes</span>
+                            <input type="text" name="" id="">
+                        </div>
+                        <div class="subtotalTitleDiv">
+                            <div class="subtotalTitle">
+                            <span>Subtotal</span>
+                            <input type="" id="subtotal" value="">
+                            </div>
+                            <div class="taxTitle">
+                                <span>
+                                    Tax
+                                </span>
+                                <input type="text">
+                            </div>
+                            <div class="discountTitle">
+                                <span>
+                                    Discount
+                                </span>
+                                <input type="text" name="" id="">
+                            </div>
+                            <div class="shippingTitle">
+                                <span>
+                                    Shipping Fee
+                                </span>
+                                <input type="text" name="" id="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--notesDiv-->
+
                 </div>
                 <!--trustScore-->
+
+               
+
             </div>
             <!--invocie div-->
+            </div>
+             <!--secondContainer-->
+            
         </div>
         <!--second_container-->
     </div>
