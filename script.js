@@ -1,10 +1,10 @@
 
 
 function myFunction() {
-    var flag =1;
+    var flag = 1;
 
     document.getElementById("id_add").addEventListener("click", function (event) {
-     
+
         //
         const target = document.getElementById("index");
         const copyElement = target.cloneNode(true);
@@ -18,12 +18,29 @@ function myFunction() {
         createH4Element.textContent = "X";
         copyElement.appendChild(createH4Element);
 
+        document.querySelector("#index-" + (flag + 1) + "> .rateInput > input").onchange = function (e) {
+            // some things
+            console.log("Changed");
+        }
+
         flag++;
         event.preventDefault();
     });
 }
 
-function deleteRow(rowElementIndex){
+function rateRow() {
+
+}
+
+function qtyRow() {
+
+}
+
+function amount() {
+
+}
+
+function deleteRow(rowElementIndex) {
     var element = rowElementIndex.parentNode;
     element.remove();
 }
@@ -31,12 +48,12 @@ function deleteRow(rowElementIndex){
 myFunction();
 
 
-function findTotal(){
+function findTotal() {
     var arr = document.getElementsByClassName('amount');
-    var tot=0;
-    for(var i=0;i<arr.length;i++){
-        if(parseFloat(arr[i].value))
+    var tot = 0;
+    for (var i = 0; i < arr.length; i++) {
+        if (parseFloat(arr[i].value))
             tot += parseFloat(arr[i].value);
     }
-    document.getElementById('subtotal').value = "$ "+tot;
+    document.getElementById('subtotal').value = "$ " + tot;
 }

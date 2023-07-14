@@ -346,3 +346,17 @@ hr .line1{
     color: #1f1f1f;
     font-weight: 700;
 }
+
+.justify-end-div-element {
+    display: flex;
+    justify-content: end;
+    padding: 4px;
+}
+
+.invoiceComapnyInput textarea {
+    width: 100%;
+    margin:0;
+    padding:8px;
+    box-shadow:none;
+    border-radius: 10px;
+}
