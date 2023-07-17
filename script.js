@@ -18,9 +18,14 @@ function myFunction() {
         createH4Element.textContent = "X";
         copyElement.appendChild(createH4Element);
 
+        var amtRs = 0;
         document.querySelector("#index-" + (flag + 1) + "> .rateInput > input").onchange = function (e) {
             // some things
             console.log("Changed");
+
+            qtyRow(i);
+            amount();
+
         }
 
         flag++;
