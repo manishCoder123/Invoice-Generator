@@ -180,11 +180,11 @@ hr .line1{
 }
 
 /* InvoiceDateSection */
-.fristTwoInputs{
+/* .fristTwoInputs{
     display: flex;
     width: 75%;
     justify-content: space-between;
-}
+} */
 .invocieDateSection{
     width: 100%;
     padding: 10px;
@@ -255,10 +255,6 @@ hr .line1{
 
 /* Dynamic Class Creation */
 
-.flex{
-    display: flex;
-    margin-bottom: 15px;
-}
 .container{
     margin-top: 10px;
 }
@@ -282,16 +278,24 @@ hr .line1{
     display: flex;
     justify-content: space-between;
     width: 95%;
+    margin-left: 15px;
 }
-.itemHeading{
+/* .itemHeading{
     display: flex;
     width: 65%;
     justify-content: space-between;
+} */
+
+.justify-center-div-element{
+    display: flex;
+    justify-content: center;
 }
 
 .indexInput{
     display: flex;
     margin-bottom: 10px;
+    width: 100%;
+    justify-content: space-between;
 }
 .indexInput input{
     width: 100%;
@@ -390,6 +394,15 @@ hr .line1{
     border: 1px solid #c0c0c0;
 }
 
-.iteminput{
-    width: 72%;
+.indexInput h4{
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    font-size: 15px;
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    color: #c0c0c0;
+    margin-top: 5px;
+
 }

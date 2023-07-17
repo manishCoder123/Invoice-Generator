@@ -144,28 +144,26 @@
                     <!--Div for create input-->
                     <div class="inputsTitle">
                         <div class="heading">
-                            <div class="itemHeading">
-                                <span> Item </span>
-                                <span> Rate </span>
-                            </div>
-                            <span> Qty </span>
-                            <span> Amount </span>
+                            <!-- <div class="itemHeading"> -->
+                                <span class="col-6"> Item </span>
+                                <span class="col-2 justify-center-div-element"> Rate </span>
+                            <!-- </div> -->
+                            <span class="col-1 justify-center-div-element"> Qty </span>
+                            <span class="col-2 justify-center-div-element"> Amount </span>
                         </div>
                         <div class="container" id="addInputSection">
                             <div class="indexInput" id="index">
-                                <div class="fristTwoInputs">
-                                <div class="iteminput col-lg-4">
-                                    <input type="text">
-                                </div>
-                                <div class="rateInput col-lg-2">
+                                <div class="col-6 itemInput">
                                     <input type="text" name="" id="">
                                 </div>
-                                </div>
-                                <div class="qtyInput col-lg-2">
+                                <div class="col-2 rateInput">
                                     <input type="text" name="" id="">
                                 </div>
-                                <div class="amountInput col-lg-2">
-                                    <input type="text" name="" id="" class="amount" onblur="findTotal()" value="" >
+                                <div class="col-1 qtyInput">
+                                    <input type="text" name="" id="">
+                                </div>
+                                <div class="col-2">
+                                    <input type="text" name="" id="" class="amount" onblur="findTotal()">
                                 </div>
                             </div>
                         </div>
