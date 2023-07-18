@@ -35,15 +35,21 @@ function myFunction() {
 
 
 function rateRow() {
-
+    document.querySelector("#index-" + (flag+1) + "> .rateInput > input").onchange = function (e) {
+        console.log("Changed")
+    }
 }
 
-function qtyRow() {
-
+function qtyRow(i) {
+    document.querySelector("#index-" + (flag+1) + "> qtyInput > input").onchange = function(e) {
+        console.log("Changed");
+    }
 }
 
 function amount() {
-
+    document.querySelector("index-" + (flag+1) + "> amountInput > input").onchange = function(e){
+        console.log("Changed");
+    }
 }
 
 function deleteRow(rowElementIndex) {
