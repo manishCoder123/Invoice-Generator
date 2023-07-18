@@ -1,11 +1,14 @@
 
+var tax = 12;
+var discount = 9;
+var shippingFee = 10;
 
 function myFunction() {
     var flag = 1;
 
     document.getElementById("id_add").addEventListener("click", function (event) {
 
-        //
+        
         const target = document.getElementById("index");
         const copyElement = target.cloneNode(true);
         copyElement.setAttribute("id", "index-" + (flag + 1))
@@ -19,45 +22,71 @@ function myFunction() {
         copyElement.appendChild(createH4Element);
 
         var amtRs = 0;
-        document.querySelector("#index-" + (flag + 1) + "> .rateInput > input").onchange = function (e) {
-            // some things
-            console.log("Changed");
+        
+        var currentFlag = flag + 1;
 
-            qtyRow(i);
-            amount();
-
-        }
-
+        document.querySelector("#index-" + (currentFlag) + "> .rateInput > input").value = "";
+        document.querySelector("#index-" + (currentFlag) + "> .qtyInput > input").value = "";
+        document.querySelector("#index-" + (currentFlag) + "> .amountInput > input").value = "";
+        
+        rateRow(currentFlag);
+        
         flag++;
         event.preventDefault();
     });
 }
 
 
-function rateRow() {
-    document.querySelector("#index-" + (flag+1) + "> .rateInput > input").onchange = function (e) {
-        console.log("Changed")
+function rateRow(index){
+    var indexName = getIndexNamedId(index);
+    document.querySelector(indexName + "> .rateInput > input").onchange = function (e) {
+        // some things
+        var rate = e.target.value;
+        console.log("Changed", );
+
+        qtyRow(index, rate);
+        amount(index, rate);
     }
 }
 
-function qtyRow(i) {
-    document.querySelector("#index-" + (flag+1) + "> qtyInput > input").onchange = function(e) {
-        console.log("Changed");
+function qtyRow(index, rate) {
+
+    var indexName = getIndexNamedId(index);
+    var initialQty = document.querySelector(indexName + "> .qtyInput > input").value;
+    
+    if(initialQty == ""){
+        document.querySelector(indexName +  "> .qtyInput > input").value = 1;
+    }
+
+    document.querySelector(indexName +  "> .qtyInput > input").onchange = function(e) {
+        console.log("qtyChanged", indexName + index);
+        amount(index, rate);
     }
 }
 
-function amount() {
-    document.querySelector("index-" + (flag+1) + "> amountInput > input").onchange = function(e){
-        console.log("Changed");
-    }
+function amount(index, rate) {
+    var indexName = getIndexNamedId(index);
+
+    var initialQty = document.querySelector(indexName +  "> .qtyInput > input").value;
+
+    var totalAmt = initialQty * rate;
+    document.querySelector(indexName +"> .amountInput > input").value = totalAmt;
+
+    // document.querySelector("#index-" + index + "> .amountInput > input").onchange = function(e){
+    //     console.log("amountChanged", "index-" + index);
+    // }
 }
+
+// get id name
+function getIndexNamedId(index){
+    return index == 0 ? "#index" : ("#index-"+ index)
+}
+
 
 function deleteRow(rowElementIndex) {
     var element = rowElementIndex.parentNode;
     element.remove();
 }
-
-myFunction();
 
 
 function findTotal() {
@@ -69,3 +98,6 @@ function findTotal() {
     }
     document.getElementById('subtotal').value = "$ " + tot;
 }
+
+rateRow(0);
+myFunction();
