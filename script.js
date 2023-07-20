@@ -42,12 +42,16 @@ function rateRow(index){
     document.querySelector(indexName + "> .rateInput > input").onchange = function (e) {
         // some things
         var rate = e.target.value;
-        console.log("Changed", );
+        console.log("Changed");
 
         qtyRow(index, rate);
         amount(index, rate);
+        taxAmount(index);
     }
 }
+
+
+
 
 function qtyRow(index, rate) {
 
@@ -83,12 +87,16 @@ function getIndexNamedId(index){
 }
 
 
+
+// Delete Row
 function deleteRow(rowElementIndex) {
     var element = rowElementIndex.parentNode;
     element.remove();
 }
 
 
+
+// Subtotal
 function findTotal() {
     var arr = document.getElementsByClassName('amount');
     var tot = 0;
@@ -98,6 +106,17 @@ function findTotal() {
     }
     document.getElementById('subtotal').value = "$ " + tot;
 }
+
+
+
+// Tax
+function taxAmount(index) {
+    var indexName = getIndexNamedId(index);
+    var initialAmount = document.querySelector(indexName + "> .amountInput > input").value;
+    var taxCalculationAmount = (initialAmount * tax)/100;
+    document.querySelector(indexName + "> .taxTitle > input").value = taxCalculationAmount;
+}
+ 
 
 rateRow(0);
 myFunction();
