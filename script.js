@@ -20,8 +20,6 @@ function myFunction() {
         createH4Element.setAttribute("onclick", "deleteRow(this)");
         createH4Element.textContent = "X";
         copyElement.appendChild(createH4Element);
-
-        var amtRs = 0;
         
         var currentFlag = flag + 1;
 
