@@ -429,3 +429,7 @@ hr .line1{
     width: 20px;
     height: 5px;
 }
+
+#blank-div > h4{
+    cursor: pointer;
+}

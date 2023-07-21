@@ -5,11 +5,13 @@ var shippingFee = 10;
 
 function myFunction() {
     var flag = 1;
-    
+
 
     document.getElementById("id_add").addEventListener("click", function (event) {
 
         
+        var currentFlag = flag + 1;
+
         const target = document.getElementById("index");
         const copyElement = target.cloneNode(true);
         copyElement.setAttribute("id", "index-" + (flag + 1))
@@ -18,26 +20,28 @@ function myFunction() {
         //<h4 id="id_remove" onclick="deleteRow(this)"> X </h4>
 
         const createH4Element = document.createElement("h4");
-        createH4Element.setAttribute("onclick", "deleteRow(this)");
         createH4Element.textContent = "X";
-        copyElement.appendChild(createH4Element);
+        const targetBlankDiv = document.querySelector("#index-"+(currentFlag)+" > #blank-div");
+        targetBlankDiv.setAttribute("onclick", "deleteRow(this)");
+        targetBlankDiv.appendChild(createH4Element)
+        copyElement.appendChild(targetBlankDiv);
         
-        var currentFlag = flag + 1;
-
         document.querySelector("#index-" + (currentFlag) + "> .rateInput > input").value = "";
         document.querySelector("#index-" + (currentFlag) + "> .qtyInput > input").value = "";
         document.querySelector("#index-" + (currentFlag) + "> .amountInput > input").value = "";
-        
+
         rateRow(currentFlag);
-        
+
         flag++;
         event.preventDefault();
     });
 }
 
 
-function rateRow(index){
+function rateRow(index) {
     var indexName = getIndexNamedId(index);
+
+    document.querySelector(indexName + "> .amountInput > input").readOnly = true;
     document.querySelector(indexName + "> .rateInput > input").onchange = function (e) {
         // some things
         var rate = e.target.value;
@@ -45,9 +49,10 @@ function rateRow(index){
 
         qtyRow(index, rate);
         amount(index, rate);
+        findTotal();
+        
     }
 }
-
 
 
 
@@ -55,12 +60,12 @@ function qtyRow(index, rate) {
 
     var indexName = getIndexNamedId(index);
     var initialQty = document.querySelector(indexName + "> .qtyInput > input").value;
-    
-    if(initialQty == ""){
-        document.querySelector(indexName +  "> .qtyInput > input").value = 1;
+
+    if (initialQty == "") {
+        document.querySelector(indexName + "> .qtyInput > input").value = 1;
     }
 
-    document.querySelector(indexName +  "> .qtyInput > input").onchange = function(e) {
+    document.querySelector(indexName + "> .qtyInput > input").onchange = function (e) {
         console.log("qtyChanged", indexName + index);
         amount(index, rate);
     }
@@ -69,41 +74,26 @@ function qtyRow(index, rate) {
 function amount(index, rate) {
     var indexName = getIndexNamedId(index);
 
-    var initialQty = document.querySelector(indexName +  "> .qtyInput > input").value;
+    var initialQty = document.querySelector(indexName + "> .qtyInput > input").value;
 
     var totalAmt = initialQty * rate;
-    var taxValue = (totalAmt * tax) / 100;
-    var afterTaxAmount = totalAmt + taxValue
-    var shippingValue = (totalAmt * shippingFee) / 100;
-    var beforeDiscount = afterTaxAmount + shippingValue
-    var discountValue = (beforeDiscount * discount)/100;
-    var totalAmount = (totalAmt + taxValue + shippingValue) - discountValue;
+    document.querySelector(indexName + "> .amountInput > input").value = totalAmt;
 
-
-    document.querySelector(indexName +"> .amountInput > input").value =totalAmt;
-    document.getElementById("tax").textContent = "$" + parseFloat(taxValue).toFixed(2);
-    document.getElementById("discount").textContent = "$" + parseFloat(discountValue).toFixed(2);
-    document.getElementById("shippingFee").textContent = "$" + parseFloat(shippingValue).toFixed(2);
-    document.getElementById("total").textContent = "$" + parseFloat(totalAmount).toFixed(2);
-    
     findTotal();
 }
 
 // get id name
-function getIndexNamedId(index){
-    return index == 0 ? "#index" : ("#index-"+ index)
+function getIndexNamedId(index) {
+    return index == 0 ? "#index" : ("#index-" + index)
 }
-
 
 
 // Delete Row
 function deleteRow(rowElementIndex) {
     var element = rowElementIndex.parentNode;
     element.remove();
-    
+    findTotal();
 }
-
-
 
 // Subtotal
 function findTotal() {
@@ -113,6 +103,18 @@ function findTotal() {
         if (parseFloat(arr[i].value))
             tot += parseFloat(arr[i].value);
     }
+
+    var taxValue = (tot * tax) / 100;
+    var afterTaxAmount = tot + taxValue
+    var shippingValue = (tot * shippingFee) / 100;
+    var beforeDiscount = afterTaxAmount + shippingValue
+    var discountValue = (beforeDiscount * discount) / 100;
+    var totalAmount = (tot + taxValue + shippingValue) - discountValue;
+
+    document.getElementById("tax").textContent = "$" + parseFloat(taxValue).toFixed(2);
+    document.getElementById("discount").textContent = "$" + parseFloat(discountValue).toFixed(2);
+    document.getElementById("shippingFee").textContent = "$" + parseFloat(shippingValue).toFixed(2);
+    document.getElementById("total").textContent = "$" + parseFloat(totalAmount).toFixed(2);
     document.getElementById('subtotal').value = "$ " + tot;
 }
 
