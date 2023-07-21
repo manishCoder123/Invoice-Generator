@@ -81,10 +81,11 @@ function amount(index, rate) {
 
 
     document.querySelector(indexName +"> .amountInput > input").value = totalAmt;
-    document.getElementById("tax").value = taxValue;
-    document.getElementById("discount").value = discountValue;
-    document.getElementById("shippingFee").value = shippingValue;
-    document.getElementById("total").value = totalAmount;
+    document.getElementById("tax").textContent = taxValue;
+    document.getElementById("discount").textContent = discountValue;
+    document.getElementById("shippingFee").textContent = shippingValue;
+    document.getElementById("total").textContent = totalAmount;
+    findTotal();
 }
 
 // get id name
