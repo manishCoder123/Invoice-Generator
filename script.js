@@ -80,11 +80,12 @@ function amount(index, rate) {
     var totalAmount = (totalAmt + taxValue + shippingValue) - discountValue;
 
 
-    document.querySelector(indexName +"> .amountInput > input").value = totalAmt;
-    document.getElementById("tax").textContent = taxValue;
-    document.getElementById("discount").textContent = discountValue;
-    document.getElementById("shippingFee").textContent = shippingValue;
-    document.getElementById("total").textContent = totalAmount;
+    document.querySelector(indexName +"> .amountInput > input").value =totalAmt;
+    document.getElementById("tax").textContent = "$" + parseFloat(taxValue).toFixed(2);
+    document.getElementById("discount").textContent = "$" + parseFloat(discountValue).toFixed(2);
+    document.getElementById("shippingFee").textContent = "$" + parseFloat(shippingValue).toFixed(2);
+    document.getElementById("total").textContent = "$" + parseFloat(totalAmount).toFixed(2);
+    
     findTotal();
 }
 
@@ -99,6 +100,7 @@ function getIndexNamedId(index){
 function deleteRow(rowElementIndex) {
     var element = rowElementIndex.parentNode;
     element.remove();
+    
 }
 
 
