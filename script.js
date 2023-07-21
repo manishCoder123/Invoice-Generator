@@ -5,6 +5,7 @@ var shippingFee = 10;
 
 function myFunction() {
     var flag = 1;
+    
 
     document.getElementById("id_add").addEventListener("click", function (event) {
 
@@ -40,12 +41,15 @@ function rateRow(index){
     document.querySelector(indexName + "> .rateInput > input").onchange = function (e) {
         // some things
         var rate = e.target.value;
-        console.log("Changed", );
+        console.log("Changed");
 
         qtyRow(index, rate);
         amount(index, rate);
     }
 }
+
+
+
 
 function qtyRow(index, rate) {
 
@@ -68,11 +72,19 @@ function amount(index, rate) {
     var initialQty = document.querySelector(indexName +  "> .qtyInput > input").value;
 
     var totalAmt = initialQty * rate;
-    document.querySelector(indexName +"> .amountInput > input").value = totalAmt;
+    var taxValue = (totalAmt * tax) / 100;
+    var afterTaxAmount = totalAmt + taxValue
+    var shippingValue = (totalAmt * shippingFee) / 100;
+    var beforeDiscount = afterTaxAmount + shippingValue
+    var discountValue = (beforeDiscount * discount)/100;
+    var totalAmount = (totalAmt + taxValue + shippingValue) - discountValue;
 
-    // document.querySelector("#index-" + index + "> .amountInput > input").onchange = function(e){
-    //     console.log("amountChanged", "index-" + index);
-    // }
+
+    document.querySelector(indexName +"> .amountInput > input").value = totalAmt;
+    document.getElementById("tax").value = taxValue;
+    document.getElementById("discount").value = discountValue;
+    document.getElementById("shippingFee").value = shippingValue;
+    document.getElementById("total").value = totalAmount;
 }
 
 // get id name
@@ -81,12 +93,16 @@ function getIndexNamedId(index){
 }
 
 
+
+// Delete Row
 function deleteRow(rowElementIndex) {
     var element = rowElementIndex.parentNode;
     element.remove();
 }
 
 
+
+// Subtotal
 function findTotal() {
     var arr = document.getElementsByClassName('amount');
     var tot = 0;
@@ -96,6 +112,7 @@ function findTotal() {
     }
     document.getElementById('subtotal').value = "$ " + tot;
 }
+
 
 rateRow(0);
 myFunction();
