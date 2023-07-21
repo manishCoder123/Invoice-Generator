@@ -5,6 +5,7 @@ var shippingFee = 10;
 
 function myFunction() {
     var flag = 1;
+    
 
     document.getElementById("id_add").addEventListener("click", function (event) {
 
@@ -46,7 +47,6 @@ function rateRow(index){
 
         qtyRow(index, rate);
         amount(index, rate);
-        taxAmount(index);
     }
 }
 
@@ -74,11 +74,19 @@ function amount(index, rate) {
     var initialQty = document.querySelector(indexName +  "> .qtyInput > input").value;
 
     var totalAmt = initialQty * rate;
-    document.querySelector(indexName +"> .amountInput > input").value = totalAmt;
+    var taxValue = (totalAmt * tax) / 100;
+    var afterTaxAmount = totalAmt + taxValue
+    var shippingValue = (totalAmt * shippingFee) / 100;
+    var beforeDiscount = afterTaxAmount + shippingValue
+    var discountValue = (beforeDiscount * discount)/100;
+    var totalAmount = (totalAmt + taxValue + shippingValue) - discountValue;
 
-    // document.querySelector("#index-" + index + "> .amountInput > input").onchange = function(e){
-    //     console.log("amountChanged", "index-" + index);
-    // }
+
+    document.querySelector(indexName +"> .amountInput > input").value = totalAmt;
+    document.getElementById("tax").value = taxValue;
+    document.getElementById("discount").value = discountValue;
+    document.getElementById("shippingFee").value = shippingValue;
+    document.getElementById("total").value = totalAmount;
 }
 
 // get id name
@@ -107,16 +115,6 @@ function findTotal() {
     document.getElementById('subtotal').value = "$ " + tot;
 }
 
-
-
-// Tax
-function taxAmount(index) {
-    var indexName = getIndexNamedId(index);
-    var initialAmount = document.querySelector(indexName + "> .amountInput > input").value;
-    var taxCalculationAmount = (initialAmount * tax)/100;
-    document.querySelector(indexName + "> .taxTitle > input").value = taxCalculationAmount;
-}
- 
 
 rateRow(0);
 myFunction();
