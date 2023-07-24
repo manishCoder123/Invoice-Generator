@@ -16,6 +16,10 @@
         href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
     <!--CSS-->
+    <link rel="stylesheet"   
+        href="https://unpkg.com/purecss@1.0.0/build/pure-min.css"   
+        integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w"   
+        crossorigin="anonymous">  
     <link rel="stylesheet" href="style.css">
     <title>Invoice</title>
 </head>
@@ -43,7 +47,62 @@
             <!--navigation_div-->
             <!--invocie div-->
             <div class="invocie">
-                <div class="col-lg-6 col-md-6 invoiceDiv"></div>
+                <div class="col-lg-6 col-md-6 invoiceDiv">
+                    <div class="invoiceCopy">
+                        <div class="invocieCopyHeading">
+                            <div class="invocieCopyHeading-Invocie">
+                                <span>INVOICE</span>
+                            </div>
+                            <div class="invocieCopyHeading-Musemind">
+                                <span class="muse muse-color">muse</span>
+                                <span class="mind">mind</span>
+                            </div>
+                        </div>
+                        <!--invocieCopyHeading-->
+
+                        <div class="invoiceNumberCopy">
+                            <span class="dublicateInvoiceNumber" id="copyInvocieNumber"></span>
+                        </div>
+                        <!--invoiceNumberCopy-->
+
+                        <div class="companyBillingDetails">
+                            <div class="companyDetails">
+                                <span id="companyDetail"></span>
+                            </div>
+                            <div class="billingDetails">
+                                <span id="billTo"></span>
+                            </div>
+                        </div>
+                        <!--companyBillingDetails-->
+
+                        <div class="tableDiv">
+                            <table class="pure-table pure-table-horizontal">
+                                <thead>
+                                    <tr>
+                                        <th class="delivery">Deliveble</th>
+                                        <th>Rate</th>
+                                        <th>Qty</th>
+                                        <th class="amount">Amount</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                            </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!--invoiceCopy-->
+                </div>
+                <!--invoiceDiv-->
+
+
+
+                <!--Right Section-->
                 <!--trustScore-->
                 <div class="col-lg-6 col-md-6 trustScore">
                     <!--scoreCard-->
@@ -84,8 +143,8 @@
                                 <div class="invoiceNumberLabel">
                                     <label>Invocie number</label>
                                 </div>
-                                <div class="invoiceInput">
-                                    <input type="text">
+                                <div class="invoiceInput" id="invoiceNumber">
+                                    <input type="text" oninput="getValue()" id="invoice_number">
                                 </div>
                             </div>
                             <!--invoiceNumber-->
@@ -98,8 +157,12 @@
                                 <div class="invoicedCompanyLabel">
                                     <label>Your comapny details</label>
                                 </div>
-                                <div class="invoiceComapnyInput">
-                                    <textarea rows="3" cols="30%" name="" id=""></textarea>
+                                <div class="invoiceCompanyInput">
+                                    <textarea rows="3" cols="30%" name="" id="invoiceCompanyDetail"
+                                        oninput="getValue()"></textarea>
+                                    <div class="companyInputRefreshIcon">
+                                        <img src="img/refresh.svg" alt="">
+                                    </div>
                                 </div>
                             </div>
                             <!--invoiceCompanyDetails-->
@@ -109,7 +172,8 @@
                                     <label>Bill to</label>
                                 </div>
                                 <div class="invoiceBillInput">
-                                    <textarea rows="3" cols="30%" name="" id=""></textarea>
+                                    <textarea rows="3" cols="30%" name="" id="invoiceBillingDEtail"
+                                        oninput="getValue()"></textarea>
                                 </div>
                             </div>
                             <!--invocieBillDetails-->
@@ -151,10 +215,13 @@
                             <span class="col-1 justify-center-div-element"> Qty </span>
                             <span class="col-2 justify-center-div-element"> Amount </span>
                         </div>
-                        <div class="container" id="addInputSection" >
+                        <div class="container" id="addInputSection">
                             <div class="indexInput" id="index">
                                 <div class="col-6 itemInput">
                                     <input type="text" name="" id="">
+                                    <div class="refreshIconImage">
+                                        <img src="img/refresh.svg" alt="">
+                                    </div>
                                 </div>
                                 <div class="col-2 rateInput">
                                     <input type="text" name="" id="">

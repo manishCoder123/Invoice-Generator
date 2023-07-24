@@ -170,6 +170,7 @@ hr .line1{
 .invoiceInput input{
     width: 97%;
     height: 35px;
+    padding: 10px;
     border-radius: 8px;
     border: 1px solid #c0c0c0;
 }
@@ -310,6 +311,7 @@ hr .line1{
     width: 100%;
     justify-content: space-between;
     gap: 7px;
+    align-items: center;
 }
 .indexInput input{
     width: 100%;
@@ -414,16 +416,8 @@ hr .line1{
 }
 
 .indexInput h4{
-    justify-content: center;
-    width: 18px;
-    height: 18px;
     font-size: 15px;
-    text-align: center;
-    display: inline-flex;
-    align-items: center;
     color: #c0c0c0;
-    margin-top: 10px;
-
 }
 .blank-div{
     width: 20px;
@@ -432,4 +426,136 @@ hr .line1{
 
 #blank-div > h4{
     cursor: pointer;
+}
+
+#blank-div{
+    display: flex;
+    width: 20px;
+    height: 20px;
+    justify-content: center;
+}
+
+.invoiceComapnyInput{
+    position: relative;
+    display: flex;
+}
+
+.companyInputRefreshIcon{
+    position: absolute;
+    right: 22px;
+    top: 9px;
+}
+.companyInputRefreshIcon img{
+    height: 12px;
+}
+
+.itemInput{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.refreshIconImage{
+    position: absolute;
+    right: 10px;
+}
+.refreshIconImage img{
+    height: 12px;
+}
+
+
+/* invoiceCopy */
+
+.invoiceDiv{
+    width: 50%;
+    background-color: #e0e3e6;
+}
+.invoiceCopy{
+    margin-top: 20px;
+    background-color: #fff;
+    margin: 20px;
+    padding: 30px;
+}
+.invocieCopyHeading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.invocieCopyHeading-Invocie{
+    font-size: 20px;
+    font-weight: 800;
+}
+.invocieCopyHeading-Musemind{
+    display: flex;
+    gap: 0;
+    font-size: 17px;
+    font-weight: 700;
+}
+.invocieCopyHeading-Musemind .muse-color{
+    color: #3a68f2;
+}
+.invoiceNumberCopy{
+    width: 53px;
+    background-color: #BFD7ED;
+    height: 17px;
+    border: 1px solid #3a68fe;
+    margin-top: 10px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    color: #3a68f2;
+}
+
+.companyBillingDetails{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.companyDetails{
+    width: 110px;
+    height: 50px;
+    border: 1px solid #3a68fe;
+    background-color: #daeefe;
+    font-size: 11px;
+    font-weight: 100;
+}
+.billingDetails{
+    width: 100px;
+    height: 50px;
+    border: 1px solid #3a68fe;
+    background-color: #daeefe;
+    font-size: 11px;
+    font-weight: 100;
+}
+
+/* Table CSS */
+.tableDiv{
+    width: 100%;
+    margin-top: 45px;
+}
+table{
+    width: 100%;
+}
+
+table .delivery{
+    width: 290px;
+}
+tbody{
+    height: 30px;
+    border: 1px solid #3a68fe;
+    background-color: #daeefe;
+}
+thead tr{
+    font-size: 10px;
+    color: #c0c0c0;
+}
+thead{
+    height: 30px;
+}
+thead .amount{
+    text-align: end;
+}
+tbody{
+    font-size: 11px;
+    font-weight: 500;
 }

@@ -37,6 +37,11 @@ function myFunction() {
     });
 }
 
+// get id name
+function getIndexNamedId(index) {
+    return index == 0 ? "#index" : ("#index-" + index)
+}
+
 
 function rateRow(index) {
     var indexName = getIndexNamedId(index);
@@ -49,7 +54,7 @@ function rateRow(index) {
 
         qtyRow(index, rate);
         amount(index, rate);
-        findTotal();
+        // findTotal();
         
     }
 }
@@ -82,10 +87,6 @@ function amount(index, rate) {
     findTotal();
 }
 
-// get id name
-function getIndexNamedId(index) {
-    return index == 0 ? "#index" : ("#index-" + index)
-}
 
 
 // Delete Row
@@ -105,17 +106,31 @@ function findTotal() {
     }
 
     var taxValue = (tot * tax) / 100;
-    var afterTaxAmount = tot + taxValue
+    var afterTaxAmount = tot + taxValue;
     var shippingValue = (tot * shippingFee) / 100;
-    var beforeDiscount = afterTaxAmount + shippingValue
+    var beforeDiscount = afterTaxAmount + shippingValue;
     var discountValue = (beforeDiscount * discount) / 100;
-    var totalAmount = (tot + taxValue + shippingValue) - discountValue;
+    var totalAmount = beforeDiscount - discountValue;
 
     document.getElementById("tax").textContent = "$" + parseFloat(taxValue).toFixed(2);
     document.getElementById("discount").textContent = "$" + parseFloat(discountValue).toFixed(2);
     document.getElementById("shippingFee").textContent = "$" + parseFloat(shippingValue).toFixed(2);
     document.getElementById("total").textContent = "$" + parseFloat(totalAmount).toFixed(2);
-    document.getElementById('subtotal').value = "$ " + tot;
+    document.getElementById('subtotal').value = "$" + tot;
+}
+
+/* Getting Values */
+function getValue(){
+    let invocie_number = document.getElementById("invoice_number").value;
+    document.getElementById("copyInvocieNumber").innerHTML = invocie_number;
+
+    /* Getting Company Details Value */
+    let getCompanyDetails = document.getElementById("invoiceCompanyDetail").value;
+    document.getElementById("companyDetail").innerHTML = getCompanyDetails;
+
+    /* Getting Billing Details Value */
+    let getbill = document.getElementById("invoiceBillingDEtail").value;
+    document.getElementById("billTo").innerHTML = getbill;
 }
 
 
