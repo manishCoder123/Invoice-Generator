@@ -37,8 +37,7 @@ function myFunction() {
         copyTarget.setAttribute("id", "tr_index-" + (flag+1));
         document.getElementById("tbody").appendChild(copyTarget);
 
-
-
+        itemName(currentFlag);
         rateRow(currentFlag);
 
         flag++;
@@ -51,6 +50,20 @@ function getIndexNamedId(index) {
     return index == 0 ? "#index" : ("#index-" + index)
 }
 
+// get Table id name
+function getIndexTableNamedId(index) {
+    return index == 0 ? "#tr_index" : ("#tr_index-" + index)
+}
+
+
+function itemName(index){
+    var indexName = getIndexNamedId(index);
+    var indexTableName = getIndexTableNamedId(index);
+    document.querySelector(indexName + "> .itemInput > input").onchange = function (e) {
+        var itemName = e.target.value;
+        document.querySelectorAll(indexTableName)[0].value = itemName;
+    }
+}
 
 // Function for Rate
 function rateRow(index) {
@@ -64,11 +77,12 @@ function rateRow(index) {
 
         qtyRow(index, rate);
         amount(index, rate);
-        gettingTableValue(index);
+        // gettingTableValue(index);
         // findTotal();
         // ----------
         
     }
+
 }
 
 
