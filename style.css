@@ -541,9 +541,10 @@ table .delivery{
     width: 290px;
 }
 tbody{
-    height: 30px;
     border: 1px solid #3a68fe;
     background-color: #daeefe;
+    font-size: 11px;
+    font-weight: 500;
 }
 thead tr{
     font-size: 10px;
@@ -555,7 +556,6 @@ thead{
 thead .amount{
     text-align: end;
 }
-tbody{
-    font-size: 11px;
-    font-weight: 500;
+tbody tr{
+    height: 30px;
 }
