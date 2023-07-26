@@ -26,9 +26,18 @@ function myFunction() {
         targetBlankDiv.appendChild(createH4Element)
         copyElement.appendChild(targetBlankDiv);
         
+        document.querySelector("#index-" + (currentFlag) + "> .itemInput > input").value = "";
         document.querySelector("#index-" + (currentFlag) + "> .rateInput > input").value = "";
         document.querySelector("#index-" + (currentFlag) + "> .qtyInput > input").value = "";
         document.querySelector("#index-" + (currentFlag) + "> .amountInput > input").value = "";
+
+        // Copy the Table data //
+        const tableTarget = document.getElementById("tr_index");
+        const copyTarget = tableTarget.cloneNode(true);
+        copyTarget.setAttribute("id", "tr_index-" + (flag+1));
+        document.getElementById("tbody").appendChild(copyTarget);
+
+
 
         rateRow(currentFlag);
 
@@ -43,6 +52,7 @@ function getIndexNamedId(index) {
 }
 
 
+// Function for Rate
 function rateRow(index) {
     var indexName = getIndexNamedId(index);
 
@@ -54,13 +64,14 @@ function rateRow(index) {
 
         qtyRow(index, rate);
         amount(index, rate);
+        gettingTableValue(index);
         // findTotal();
         
     }
 }
 
 
-
+// Function for quantity 
 function qtyRow(index, rate) {
 
     var indexName = getIndexNamedId(index);
@@ -76,6 +87,8 @@ function qtyRow(index, rate) {
     }
 }
 
+
+// Function for Amount
 function amount(index, rate) {
     var indexName = getIndexNamedId(index);
 
@@ -86,7 +99,6 @@ function amount(index, rate) {
 
     findTotal();
 }
-
 
 
 // Delete Row
@@ -121,6 +133,7 @@ function findTotal() {
 
 /* Getting Values */
 function getValue(){
+    /* Getting Invoice Details value */
     let invocie_number = document.getElementById("invoice_number").value;
     document.getElementById("copyInvocieNumber").innerHTML = invocie_number;
 
@@ -133,6 +146,18 @@ function getValue(){
     document.getElementById("billTo").innerHTML = getbill;
 }
 
+
+
+/* Function for Table */
+function gettingTableValue(index){
+    const indexName = getIndexNamedId(index);
+    const getRateInput = document.getElementById("index").querySelectorAll("");
+    console.log('gettingTableValue', getRateInput);
+    for( var i = 0; i < getRateInput.length; i++){
+        var result = document.querySelectorAll("#index")[i];
+        console.log(result);
+    }
+}
 
 rateRow(0);
 myFunction();
