@@ -22,10 +22,10 @@ function myFunction() {
         const createH4Element = document.createElement("h4");
         createH4Element.textContent = "X";
         const targetBlankDiv = document.querySelector("#index-"+(currentFlag)+" > #blank-div");
-        targetBlankDiv.setAttribute("onclick", "deleteRow(this)");
+        targetBlankDiv.setAttribute("onclick", "deleteRow(this, "+currentFlag+")");
         targetBlankDiv.appendChild(createH4Element)
         copyElement.appendChild(targetBlankDiv);
-        
+
         document.querySelector("#index-" + (currentFlag) + "> .rateInput > input").value = "";
         document.querySelector("#index-" + (currentFlag) + "> .qtyInput > input").value = "";
         document.querySelector("#index-" + (currentFlag) + "> .amountInput > input").value = "";
@@ -55,6 +55,7 @@ function rateRow(index) {
         qtyRow(index, rate);
         amount(index, rate);
         // findTotal();
+        // ----------
         
     }
 }
@@ -90,9 +91,10 @@ function amount(index, rate) {
 
 
 // Delete Row
-function deleteRow(rowElementIndex) {
+function deleteRow(rowElementIndex, index) {
     var element = rowElementIndex.parentNode;
     element.remove();
+    console.log("delete_index", index);
     findTotal();
 }
 
