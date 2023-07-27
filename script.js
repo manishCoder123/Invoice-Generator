@@ -61,7 +61,7 @@ function itemName(index){
     var indexTableName = getIndexTableNamedId(index);
     document.querySelector(indexName + "> .itemInput > input").onchange = function (e) {
         var itemName = e.target.value;
-        document.querySelectorAll(indexTableName)[0].value = itemName;
+        document.querySelectorAll(indexTableName + "> td")[0].textContent = itemName;
     }
 }
 
