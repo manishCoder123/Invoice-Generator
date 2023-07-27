@@ -78,7 +78,7 @@ function rateRow(index) {
     document.querySelector(indexName + "> .rateInput > input").onchange = function (e) {
         // some things
         var rate = e.target.value;
-        document.querySelectorAll(indexTableName + "> .td_rate")[0].textContent = rate;
+        document.querySelectorAll(indexTableName + "> td")[1].textContent = rate;
         console.log("Changed");
 
         qtyRow(index, rate);
@@ -101,11 +101,15 @@ function qtyRow(index, rate) {
 
     if (initialQty == "") {
         document.querySelector(indexName + "> .qtyInput > input").value = 1;
+        document.querySelectorAll(indexTableName + "> td")[2].textContent = 1;
+    }else{
+        document.querySelectorAll(indexTableName + "> td")[2].textContent = initialQty;
     }
 
+    
     document.querySelector(indexName + "> .qtyInput > input").onchange = function (e) {
         const qtyValue = e.target.value;
-        document.querySelectorAll(indexTableName + "> .td_qtyValue")[0].textContent = qtyValue;
+        document.querySelectorAll(indexTableName + "> td")[2].textContent = qtyValue;
         console.log("qtyChanged", indexName + index);
         amount(index, rate);
     }
@@ -123,7 +127,7 @@ function amount(index, rate) {
     var totalAmt = initialQty * rate;
     document.querySelector(indexName + "> .amountInput > input").value = totalAmt;
 
-    document.querySelectorAll(indexTableName + "> .td_amountValue")[0].textContent = totalAmt
+    document.querySelectorAll(indexTableName + "> td")[3].textContent = totalAmt;
     findTotal();
 }
 
