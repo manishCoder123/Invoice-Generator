@@ -4,7 +4,7 @@ var discount = 9;
 var shippingFee = 10;
 
 function myFunction() {
-    var flag = 1;
+    var flag = 0;
 
 
     document.getElementById("id_add").addEventListener("click", function (event) {
@@ -37,6 +37,11 @@ function myFunction() {
         copyTarget.setAttribute("id", "tr_index-" + (flag+1));
         document.getElementById("tbody").appendChild(copyTarget);
 
+        document.querySelector("#tr_index-" + (currentFlag)+ "> .td_itemValue").textContent = "";
+        document.querySelector("#tr_index-" + (currentFlag)+ "> .td_rate").textContent = "";
+        document.querySelector("#tr_index-" + (currentFlag)+ "> .td_qtyValue").textContent = "";
+        document.querySelector("#tr_index-" + (currentFlag)+ "> .td_amountValue").textContent = "";
+
         itemName(currentFlag);
         rateRow(currentFlag);
 
@@ -61,18 +66,19 @@ function itemName(index){
     var indexTableName = getIndexTableNamedId(index);
     document.querySelector(indexName + "> .itemInput > input").onchange = function (e) {
         var itemName = e.target.value;
-        document.querySelectorAll(indexTableName)[0].value = itemName;
+        document.querySelectorAll(indexTableName + "> td")[0].textContent = itemName;
     }
 }
 
 // Function for Rate
 function rateRow(index) {
     var indexName = getIndexNamedId(index);
-
+    var indexTableName = getIndexTableNamedId(index);
     document.querySelector(indexName + "> .amountInput > input").readOnly = true;
     document.querySelector(indexName + "> .rateInput > input").onchange = function (e) {
         // some things
         var rate = e.target.value;
+        document.querySelectorAll(indexTableName + "> .td_rate")[0].textContent = rate;
         console.log("Changed");
 
         qtyRow(index, rate);
@@ -90,6 +96,7 @@ function rateRow(index) {
 function qtyRow(index, rate) {
 
     var indexName = getIndexNamedId(index);
+    var indexTableName = getIndexTableNamedId(index);
     var initialQty = document.querySelector(indexName + "> .qtyInput > input").value;
 
     if (initialQty == "") {
@@ -97,6 +104,8 @@ function qtyRow(index, rate) {
     }
 
     document.querySelector(indexName + "> .qtyInput > input").onchange = function (e) {
+        const qtyValue = e.target.value;
+        document.querySelectorAll(indexTableName + "> .td_qtyValue")[0].textContent = qtyValue;
         console.log("qtyChanged", indexName + index);
         amount(index, rate);
     }
@@ -105,13 +114,16 @@ function qtyRow(index, rate) {
 
 // Function for Amount
 function amount(index, rate) {
+
     var indexName = getIndexNamedId(index);
+    var indexTableName = getIndexTableNamedId(index);
 
     var initialQty = document.querySelector(indexName + "> .qtyInput > input").value;
 
     var totalAmt = initialQty * rate;
     document.querySelector(indexName + "> .amountInput > input").value = totalAmt;
 
+    document.querySelectorAll(indexTableName + "> .td_amountValue")[0].textContent = totalAmt
     findTotal();
 }
 
@@ -174,6 +186,6 @@ function gettingTableValue(index){
         console.log(result);
     }
 }
-
+itemName(0)
 rateRow(0);
 myFunction();
