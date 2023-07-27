@@ -504,7 +504,9 @@ hr .line1{
     align-items: center;
     color: #3a68f2;
 }
-
+.invoiceCompanyInput{
+    position: relative;
+}
 .companyBillingDetails{
     width: 80%;
     display: flex;
@@ -558,4 +560,7 @@ thead .amount{
 }
 tbody tr{
     height: 30px;
+}
+tbody .td_amountValue{
+    text-align: center;
 }
