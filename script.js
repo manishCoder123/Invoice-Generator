@@ -157,6 +157,7 @@ function findTotal() {
     document.getElementById("shippingFee").textContent = "$" + parseFloat(shippingValue).toFixed(2);
     document.getElementById("total").textContent = "$" + parseFloat(totalAmount).toFixed(2);
     document.getElementById('subtotal').value = "$" + tot;
+
 }
 
 /* Getting Values */
