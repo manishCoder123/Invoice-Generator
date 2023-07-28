@@ -16,10 +16,8 @@
         href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
     <!--CSS-->
-    <link rel="stylesheet"   
-        href="https://unpkg.com/purecss@1.0.0/build/pure-min.css"   
-        integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w"   
-        crossorigin="anonymous">  
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css"
+        integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <title>Invoice</title>
 </head>
@@ -92,12 +90,64 @@
                                         <td class="td_qtyValue"></td>
                                         <td class="td_amountValue"></td>
                                     </tr>
-                                
-                            </tbody>
+                                </tbody>
                             </table>
                         </div>
+                        <!--tableDiv-->
+
+                        <div class="subTotal-div">
+                            <div class="subtotal setPosition">
+                                <span class="font_size">Subtotal</span>
+                                <span class="spanInput" id="id_subtotal"></span>
+                            </div>
+                            <div class="taxdiv setPosition">
+                                <span class="font_size">Tax</span>
+                                <span class="spanInput" id="id_tax"></span>
+                            </div>
+                            <div class="discpuntdiv setPosition">
+                                <span class="font_size">Discount</span>
+                                <span class="spanInput" id="id_discount"></span>
+                            </div>
+                            <div class="shippingfeediv setPosition">
+                                <span class="font_size">Shipping Fee</span>
+                                <span class="spanInput" id="id_shipping"></span>
+                            </div>
+                        </div>
+                        <!--subTotal-div-->
+
+                        <div class="note-div">
+                            <span class="notediv">NOTES</span>
+                            <span class="disclamer">Pay within 15 days. Thank you for your Business</span>
+                        </div>
+                        <!--note-div-->
                     </div>
                     <!--invoiceCopy-->
+
+                    <div class="blue-div">
+                        <div class="totalDetails">
+                            <div class="invoiceDetailDiv">
+                                <span class="invoice">Invoice Details</span>
+                                <div class="issued_date_Details_Div date_details">
+                                    <Span class="set-size-of-date">Date Issued</Span>
+                                    <span class="date-size" id="id_issued_date"></span>
+                                </div>
+                                <div class="due_date_details_Div date_details">
+                                    <span class="set-size-of-date">Due Date</span>
+                                    <span class="date-size" id="id_due-date"></span>
+                                </div>
+                            </div>
+                            <div class="total_Aount_Details_div">
+                                <span class="classTotalAmount">Total Amount</span>
+                                <span class="totalAmountSpan" id="id_total_amount"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--blue-div-->
+
+                    <div class="buttonDiv">
+                        <button class="save">Save</button>
+                        <button class="send">Save and Send</button>
+                    </div>
                 </div>
                 <!--invoiceDiv-->
 
@@ -188,7 +238,7 @@
                                     <label>Date issued</label>
                                 </div>
                                 <div class="invoiceDateIssuedInput">
-                                    <input type="date">
+                                    <input type="date" id="date">
                                 </div>
                             </div>
                             <!--invocieDateIssued-->
@@ -198,7 +248,7 @@
                                     <label>Due date</label>
                                 </div>
                                 <div class="invoiceDateDueInput">
-                                    <input type="date" name="" id="">
+                                    <input type="date" name="" id="dateDue">
                                 </div>
                             </div>
                             <!--invocieDateDue-->
@@ -239,6 +289,9 @@
                         <!--Button for create more inputs-->
                         <div class="addBtn">
                             <a href="" id="id_add" class="add">&plus;</a>
+                        </div>
+                        <div class="addItem">
+                            <span>Add Item</span>
                         </div>
                         <!--Button for create more inputs-->
                     </div>

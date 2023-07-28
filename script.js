@@ -23,7 +23,7 @@ function myFunction() {
         createH4Element.textContent = "X";
         const targetBlankDiv = document.querySelector("#index-"+(currentFlag)+" > #blank-div");
         targetBlankDiv.setAttribute("onclick", "deleteRow(this, "+currentFlag+")");
-        targetBlankDiv.appendChild(createH4Element)
+        targetBlankDiv.appendChild(createH4Element);
         copyElement.appendChild(targetBlankDiv);
         
         document.querySelector("#index-" + (currentFlag) + "> .itemInput > input").value = "";
@@ -102,7 +102,8 @@ function qtyRow(index, rate) {
     if (initialQty == "") {
         document.querySelector(indexName + "> .qtyInput > input").value = 1;
         document.querySelectorAll(indexTableName + "> td")[2].textContent = 1;
-    }else{
+    }
+    else{
         document.querySelectorAll(indexTableName + "> td")[2].textContent = initialQty;
     }
 
@@ -162,6 +163,11 @@ function findTotal() {
     document.getElementById("total").textContent = "$" + parseFloat(totalAmount).toFixed(2);
     document.getElementById('subtotal').value = "$" + tot;
 
+    document.getElementById('id_subtotal').textContent = "$" + tot;
+    document.getElementById('id_tax').textContent = "$" + parseFloat(taxValue).toFixed(2);
+    document.getElementById('id_discount').textContent = "$" + parseFloat(discountValue).toFixed(2);
+    document.getElementById('id_shipping').textContent = "$" + parseFloat(shippingValue).toFixed(2);
+    document.getElementById('id_total_amount').textContent = "$" + parseFloat(totalAmount).toFixed(2);
 }
 
 /* Getting Values */
@@ -179,18 +185,21 @@ function getValue(){
     document.getElementById("billTo").innerHTML = getbill;
 }
 
+// Getting Issued And Due Date //
 
-
-/* Function for Table */
-function gettingTableValue(index){
-    const indexName = getIndexNamedId(index);
-    const getRateInput = document.getElementById("index").querySelectorAll("");
-    console.log('gettingTableValue', getRateInput);
-    for( var i = 0; i < getRateInput.length; i++){
-        var result = document.querySelectorAll("#index")[i];
-        console.log(result);
+function getDate(){
+    document.getElementById("date").onchange = function(){
+        var date = document.getElementById("date").value;
+        document.getElementById("id_issued_date").textContent = date
+    }
+    document.getElementById("dateDue").onchange = function(){
+        var dueDate = document.getElementById("dateDue").value;
+        document.getElementById("id_due-date").textContent = dueDate
     }
 }
+
+
+
 itemName(0)
 rateRow(0);
 myFunction();

@@ -253,6 +253,13 @@ hr .line1{
     margin-top: 20px;
   }
 
+  .addItem{
+    text-align: center;
+    font-size: 11px;
+    font-weight: 600;
+    color: rgb(58, 104, 242);
+    margin-top: 5px;
+  }
   .add{
     text-decoration: none;
     display: flex;
@@ -318,6 +325,8 @@ hr .line1{
     border-radius: 5px;
     border: 1px solid #c0c0c0;
     padding: 5px;
+    font-size: 15px;
+    font-weight: 500;
 }
 
 .removeBtn{
@@ -360,6 +369,7 @@ hr .line1{
     /* border: none; */
     margin-left: 20px;
     width: 150px;
+    text-align: end;
 }
 
 .heading span{
@@ -389,9 +399,14 @@ hr .line1{
     border-radius: 5px;
     padding: 5px;
     color: #1f1f1f;
+    text-align: end;
+    font-size: 11px;
+    font-weight: 500;
 }
 .subtotalTitle input{
     border: none;
+    font-size: 15px;
+    font-weight: 600;
 }
 
 .subtotalTitle span{
@@ -472,7 +487,7 @@ hr .line1{
 .invoiceCopy{
     margin-top: 20px;
     background-color: #fff;
-    margin: 20px;
+    margin: 20px 20px 0 20px;
     padding: 30px;
 }
 .invocieCopyHeading{
@@ -500,6 +515,7 @@ hr .line1{
     border: 1px solid #3a68fe;
     margin-top: 10px;
     font-size: 14px;
+    font-weight: 500;
     display: flex;
     align-items: center;
     color: #3a68f2;
@@ -563,4 +579,137 @@ tbody tr{
 }
 tbody .td_amountValue{
     text-align: center;
+}
+
+
+.subTotal-div{
+    margin-top: 20px;
+}
+.setPosition{
+    display: flex;
+    justify-content: end;
+}
+.setPosition .font_size{
+    font-size: 11px;
+    font-weight: 500;
+    color: #c0c0c0;
+}
+.spanInput{
+    margin-left: 20px;
+    width: 120px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    color: #1f1f1f;
+    text-align: end;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.note-div{
+    display: flex;
+    flex-direction: column;
+    font-size: 11px;
+    margin-top: 25px;
+}
+.note-div .notediv{
+    color: #c0c0c0;
+    margin-bottom: 10px;
+}
+
+.disclamer{
+    font-weight: 600;
+}
+
+.blue-div{
+    display: flex;
+    width: 94%;
+    height: 170px;
+    padding: 30px;
+    margin: 0px 20px 20px 20px;
+    background-color: #3a68f2;
+    align-items: center;
+}
+.date_details{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+.date-size{
+    width: 100px;
+    height: 20px;
+    border: none;
+    font-size: 13px;
+    font-weight: 500;
+    background: #daeefe;
+    opacity: .2;
+}
+.totalDetails{
+    display: flex;
+    width: 94%;
+    justify-content: space-between;
+}
+.total_Aount_Details_div{
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+}
+.totalAmountSpan{
+    width: 180px;
+    height: 30px;
+    border: 1px solid;
+    font-size: 25px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    color: #fff;
+    justify-content: end;
+}
+.classTotalAmount{
+    font-size: 11px;
+    font-weight: 500;
+    color: #fff;
+}
+.set-size-of-date{
+    font-size: 11px;
+    font-weight: 400;
+    color: #fff;
+}
+.invoice{
+    font-size: 13px;
+    font-weight: 600;
+    color: #fff;
+}
+
+
+.buttonDiv{
+    width: 100%;
+    padding-right: 18px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    background-color: #d3d3d3;
+}
+.save{
+    font-size: 11px;
+    width: 70px;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #c0c0c0;
+    background: #fff;
+    font-weight: 600;
+    margin-right: 9px;
+}
+.send{
+    font-size: 11px;
+    width: 100px;
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    background: #3a68f2;
+    color: #fff;
+    font-weight: 600;
 }
