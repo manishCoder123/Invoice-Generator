@@ -135,6 +135,14 @@ function amount(index, rate) {
 
 // Delete Row
 function deleteRow(rowElementIndex, index) {
+    var indexTableName = getIndexTableNamedId(index);
+
+    if(index >= 1){
+        var tableIndexElement = document.getElementById(indexTableName.replace("#",""));
+        tableIndexElement.parentNode.removeChild(tableIndexElement);
+    }
+  
+
     var element = rowElementIndex.parentNode;
     element.remove();
     console.log("delete_index", index);
@@ -199,7 +207,7 @@ function getDate(){
 }
 
 
-
+getDate();
 itemName(0)
 rateRow(0);
 myFunction();
