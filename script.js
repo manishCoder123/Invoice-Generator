@@ -141,8 +141,6 @@ function deleteRow(rowElementIndex, index) {
         var tableIndexElement = document.getElementById(indexTableName.replace("#",""));
         tableIndexElement.parentNode.removeChild(tableIndexElement);
     }
-  
-
     var element = rowElementIndex.parentNode;
     element.remove();
     console.log("delete_index", index);
@@ -206,8 +204,34 @@ function getDate(){
     }
 }
 
+// function getScreenShot(canvas, filename){
+//     const data = canvas.toDataURL("image/png;base64");
+//     const downloadLink = document.querySelector("#save");
+//     downloadLink.download = filename;
+//     downloadLink.href = data;
+// }
+// html2canvas(document.querySelector("#invoiceDiv")).then((canvas)=>{
+//     download(canvas, "asd");
+// })
+
+
+{/* <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.js"></script>
+<script src="http://cdn.jsdelivr.net/g/filesaver.js"></script> */}
+
+{/* <script>
+        $(document).ready(function(){
+            $("#save").click(function(){
+                domtoimage.toBlob(document.getElementById("invoiceDiv")).then(function(){
+                    window.saveAs(Blob, "output.png")
+                })
+            })
+        })
+</script> */}
+
 
 getDate();
 itemName(0)
 rateRow(0);
 myFunction();
+

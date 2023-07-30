@@ -480,11 +480,11 @@ hr .line1{
 
 /* invoiceCopy */
 
-.invoiceDiv{
+#invoiceDiv{
     width: 50%;
     background-color: #e0e3e6;
 }
-.invoiceCopy{
+#invoiceCopy{
     margin-top: 20px;
     background-color: #fff;
     margin: 20px 20px 0 20px;
@@ -536,7 +536,9 @@ hr .line1{
     background-color: #daeefe;
     font-size: 11px;
     font-weight: 100;
+    overflow-wrap: break-word;
 }
+
 .billingDetails{
     width: 100px;
     height: 50px;
@@ -544,6 +546,7 @@ hr .line1{
     background-color: #daeefe;
     font-size: 11px;
     font-weight: 100;
+    word-wrap: break-word;
 }
 
 /* Table CSS */
@@ -693,7 +696,7 @@ tbody .td_amountValue{
     justify-content: end;
     background-color: #d3d3d3;
 }
-.save{
+#download{
     font-size: 11px;
     width: 70px;
     padding: 8px;

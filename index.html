@@ -44,9 +44,9 @@
             </div>
             <!--navigation_div-->
             <!--invocie div-->
-            <div class="invocie">
-                <div class="col-lg-6 col-md-6 invoiceDiv">
-                    <div class="invoiceCopy">
+            <div class="invocie" onload="onClick()">
+                <div class="col-lg-6 col-md-6" id="invoiceDiv">
+                    <div id="invoiceCopy">
                         <div class="invocieCopyHeading">
                             <div class="invocieCopyHeading-Invocie">
                                 <span>INVOICE</span>
@@ -145,7 +145,7 @@
                     <!--blue-div-->
 
                     <div class="buttonDiv">
-                        <button class="save">Save</button>
+                        <button id="download"  href="#">Save</button>
                         <button class="send">Save and Send</button>
                     </div>
                 </div>
@@ -338,8 +338,29 @@
     </div>
     <!--first_Containet-->
     <!--JavaScript Part-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" integrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoeqMV/TJlSKda6FXzoEyYGjTe+vXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.js"></script>
     <script src="script.js"></script>
+    <script>
+        function onClick(){
+            $("#download").click();
+        }
+
+        $(document).ready(function(){
+            var element = $("#invoiceDiv");
+
+            $("#download").on("click", function(){
+                html2canvas(element, {
+                    onrendered:function(canvas){
+                        var imageData = canvas.toDataURL("image/jpg");
+                        var newData = imageData.replace('/^data:image\/jpg', "data:application/octet-stream");
+                        $("#download").attr("download", "image.jpg").attr("href", newData);
+                    }
+                })
+            })
+        })
+    </script>
 </body>
 
 </html>
