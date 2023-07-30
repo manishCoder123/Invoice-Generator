@@ -57,12 +57,10 @@
                             </div>
                         </div>
                         <!--invocieCopyHeading-->
-
                         <div class="invoiceNumberCopy">
                             <span class="dublicateInvoiceNumber" id="copyInvocieNumber"></span>
                         </div>
                         <!--invoiceNumberCopy-->
-
                         <div class="companyBillingDetails">
                             <div class="companyDetails">
                                 <span id="companyDetail"></span>
@@ -72,7 +70,6 @@
                             </div>
                         </div>
                         <!--companyBillingDetails-->
-
                         <div class="tableDiv">
                             <table class="pure-table pure-table-horizontal">
                                 <thead>
@@ -94,7 +91,6 @@
                             </table>
                         </div>
                         <!--tableDiv-->
-
                         <div class="subTotal-div">
                             <div class="subtotal setPosition">
                                 <span class="font_size">Subtotal</span>
@@ -114,7 +110,6 @@
                             </div>
                         </div>
                         <!--subTotal-div-->
-
                         <div class="note-div">
                             <span class="notediv">NOTES</span>
                             <span class="disclamer">Pay within 15 days. Thank you for your Business</span>
@@ -122,7 +117,6 @@
                         <!--note-div-->
                     </div>
                     <!--invoiceCopy-->
-
                     <div class="blue-div">
                         <div class="totalDetails">
                             <div class="invoiceDetailDiv">
@@ -143,16 +137,12 @@
                         </div>
                     </div>
                     <!--blue-div-->
-
                     <div class="buttonDiv">
-                        <button id="download"  href="#">Save</button>
+                        <button id="download" href="#">Save</button>
                         <button class="send">Save and Send</button>
                     </div>
                 </div>
                 <!--invoiceDiv-->
-
-
-
                 <!--Right Section-->
                 <!--trustScore-->
                 <div class="col-lg-6 col-md-6 trustScore">
@@ -339,28 +329,11 @@
     <!--first_Containet-->
     <!--JavaScript Part-->
     <script src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+        integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="script.js"></script>
-    <script>
-        function onClick(){
-            $("#download").click();
-        }
-
-        $(document).ready(function(){
-            var element = $("#invoiceDiv");
-
-            $("#download").on("click", function(){
-                html2canvas(element, {
-                    onrendered:function(canvas){
-                        var imageData = canvas.toDataURL("image/jpg");
-                        var newData = imageData.replace('/^data:image\/jpg', "data:application/octet-stream");
-                        $("#download").attr("download", "image.jpg").attr("href", newData);
-                    }
-                })
-            })
-        })
-    </script>
+    
 </body>
 
 </html>

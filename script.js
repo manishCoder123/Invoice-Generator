@@ -204,30 +204,46 @@ function getDate(){
     }
 }
 
-// function getScreenShot(canvas, filename){
-//     const data = canvas.toDataURL("image/png;base64");
-//     const downloadLink = document.querySelector("#save");
-//     downloadLink.download = filename;
-//     downloadLink.href = data;
-// }
-// html2canvas(document.querySelector("#invoiceDiv")).then((canvas)=>{
-//     download(canvas, "asd");
-// })
+
+$(document).ready(function () {
+    var element = $("#invoiceDiv")[0];
+
+    $("#download").on("click", function () {
+        // hide hightlish here
+        
+        html2canvas(element).then((canvas) => {
+
+            var imageData = canvas.toDataURL("image/webp");
+            var newData = imageData.replace('/^data:image\/webp', "data:application/octet-stream");
+           
+            
+            saveAs(newData, Math.floor((new Date() / 1000)).toString() + ".webp" );
+            
+            // show hightlight here
+
+        });
+    })
+});
 
 
-{/* <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.js"></script>
-<script src="http://cdn.jsdelivr.net/g/filesaver.js"></script> */}
+function saveAs(uri, filename) {
+    var link = document.createElement('a');
+    if (typeof link.download === 'string') {
+        link.href = uri;
+        link.download = filename;
 
-{/* <script>
-        $(document).ready(function(){
-            $("#save").click(function(){
-                domtoimage.toBlob(document.getElementById("invoiceDiv")).then(function(){
-                    window.saveAs(Blob, "output.png")
-                })
-            })
-        })
-</script> */}
+        //Firefox requires the link to be in the body
+        document.body.appendChild(link);
+
+        //simulate click
+        link.click();
+
+        //remove the link when done
+        document.body.removeChild(link);
+    } else {
+        window.open(uri);
+    }
+}
 
 
 getDate();
