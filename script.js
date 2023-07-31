@@ -206,21 +206,29 @@ function getDate(){
 
 
 $(document).ready(function () {
-    var element = $("#invoiceDiv")[0];
+    var element = $("#screenShot")[0];
+
+    // hide hightlish here
+    $("#hide").css({ "background-color" : "transparent" })
+    $("#companyDetail").hide();
+    $("#hide1").css({"background-color" : "transparent"})
+    $("#billTo").hide();
 
     $("#download").on("click", function () {
-        // hide hightlish here
-        
-        html2canvas(element).then((canvas) => {
 
+        // show hightlight here
+        $("#hide").css({ "background-color" : "#daeefe" })
+        $("#companyDetail").show();
+        $("#hide1").css({"background-color" : "#daeefe"})
+        $("#billTo").show();
+
+        html2canvas(element).then((canvas) => {
+            
             var imageData = canvas.toDataURL("image/webp");
             var newData = imageData.replace('/^data:image\/webp', "data:application/octet-stream");
            
-            
             saveAs(newData, Math.floor((new Date() / 1000)).toString() + ".webp" );
             
-            // show hightlight here
-
         });
     })
 });

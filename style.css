@@ -524,14 +524,13 @@ hr .line1{
     position: relative;
 }
 .companyBillingDetails{
-    width: 80%;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
 }
 .companyDetails{
-    width: 110px;
-    height: 50px;
+    width: 150px;
     border: 1px solid #3a68fe;
     background-color: #daeefe;
     font-size: 11px;
@@ -540,7 +539,7 @@ hr .line1{
 }
 
 .billingDetails{
-    width: 100px;
+    width: 150px;
     height: 50px;
     border: 1px solid #3a68fe;
     background-color: #daeefe;
@@ -715,4 +714,7 @@ tbody .td_amountValue{
     background: #3a68f2;
     color: #fff;
     font-weight: 600;
+}
+#screenShot{
+    padding-bottom: 15px;
 }

@@ -44,99 +44,101 @@
             </div>
             <!--navigation_div-->
             <!--invocie div-->
-            <div class="invocie" onload="onClick()">
+            <div class="invocie" >
                 <div class="col-lg-6 col-md-6" id="invoiceDiv">
-                    <div id="invoiceCopy">
-                        <div class="invocieCopyHeading">
-                            <div class="invocieCopyHeading-Invocie">
-                                <span>INVOICE</span>
-                            </div>
-                            <div class="invocieCopyHeading-Musemind">
-                                <span class="muse muse-color">muse</span>
-                                <span class="mind">mind</span>
-                            </div>
-                        </div>
-                        <!--invocieCopyHeading-->
-                        <div class="invoiceNumberCopy">
-                            <span class="dublicateInvoiceNumber" id="copyInvocieNumber"></span>
-                        </div>
-                        <!--invoiceNumberCopy-->
-                        <div class="companyBillingDetails">
-                            <div class="companyDetails">
-                                <span id="companyDetail"></span>
-                            </div>
-                            <div class="billingDetails">
-                                <span id="billTo"></span>
-                            </div>
-                        </div>
-                        <!--companyBillingDetails-->
-                        <div class="tableDiv">
-                            <table class="pure-table pure-table-horizontal">
-                                <thead>
-                                    <tr>
-                                        <th class="delivery">Deliveble</th>
-                                        <th>Rate</th>
-                                        <th>Qty</th>
-                                        <th class="amount">Amount</th>
-                                    </tr>
-                                </thead>
-                                <tbody id="tbody">
-                                    <tr id="tr_index">
-                                        <td class="td_itemValue"></td>
-                                        <td class="td_rate"></td>
-                                        <td class="td_qtyValue"></td>
-                                        <td class="td_amountValue"></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <!--tableDiv-->
-                        <div class="subTotal-div">
-                            <div class="subtotal setPosition">
-                                <span class="font_size">Subtotal</span>
-                                <span class="spanInput" id="id_subtotal"></span>
-                            </div>
-                            <div class="taxdiv setPosition">
-                                <span class="font_size">Tax</span>
-                                <span class="spanInput" id="id_tax"></span>
-                            </div>
-                            <div class="discpuntdiv setPosition">
-                                <span class="font_size">Discount</span>
-                                <span class="spanInput" id="id_discount"></span>
-                            </div>
-                            <div class="shippingfeediv setPosition">
-                                <span class="font_size">Shipping Fee</span>
-                                <span class="spanInput" id="id_shipping"></span>
-                            </div>
-                        </div>
-                        <!--subTotal-div-->
-                        <div class="note-div">
-                            <span class="notediv">NOTES</span>
-                            <span class="disclamer">Pay within 15 days. Thank you for your Business</span>
-                        </div>
-                        <!--note-div-->
-                    </div>
-                    <!--invoiceCopy-->
-                    <div class="blue-div">
-                        <div class="totalDetails">
-                            <div class="invoiceDetailDiv">
-                                <span class="invoice">Invoice Details</span>
-                                <div class="issued_date_Details_Div date_details">
-                                    <Span class="set-size-of-date">Date Issued</Span>
-                                    <span class="date-size" id="id_issued_date"></span>
+                    <div id="screenShot">
+                        <div id="invoiceCopy">
+                            <div class="invocieCopyHeading">
+                                <div class="invocieCopyHeading-Invocie">
+                                    <span>INVOICE</span>
                                 </div>
-                                <div class="due_date_details_Div date_details">
-                                    <span class="set-size-of-date">Due Date</span>
-                                    <span class="date-size" id="id_due-date"></span>
+                                <div class="invocieCopyHeading-Musemind">
+                                    <span class="muse muse-color">muse</span>
+                                    <span class="mind">mind</span>
                                 </div>
                             </div>
-                            <div class="total_Aount_Details_div">
-                                <span class="classTotalAmount">Total Amount</span>
-                                <span class="totalAmountSpan" id="id_total_amount"></span>
+                            <!--invocieCopyHeading-->
+                            <div class="invoiceNumberCopy">
+                                <span class="dublicateInvoiceNumber" id="copyInvocieNumber"></span>
+                            </div>
+                            <!--invoiceNumberCopy-->
+                            <div class="companyBillingDetails" >
+                                <div class="companyDetails" id="hide">
+                                    <span id="companyDetail"></span>
+                                </div>
+                                <div class="billingDetails" id="hide1">
+                                    <span id="billTo"></span>
+                                </div>
+                            </div>
+                            <!--companyBillingDetails-->
+                            <div class="tableDiv">
+                                <table class="pure-table pure-table-horizontal">
+                                    <thead>
+                                        <tr>
+                                            <th class="delivery">Deliveble</th>
+                                            <th>Rate</th>
+                                            <th>Qty</th>
+                                            <th class="amount">Amount</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tbody">
+                                        <tr id="tr_index">
+                                            <td class="td_itemValue"></td>
+                                            <td class="td_rate"></td>
+                                            <td class="td_qtyValue"></td>
+                                            <td class="td_amountValue"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!--tableDiv-->
+                            <div class="subTotal-div">
+                                <div class="subtotal setPosition">
+                                    <span class="font_size">Subtotal</span>
+                                    <span class="spanInput" id="id_subtotal"></span>
+                                </div>
+                                <div class="taxdiv setPosition">
+                                    <span class="font_size">Tax</span>
+                                    <span class="spanInput" id="id_tax"></span>
+                                </div>
+                                <div class="discpuntdiv setPosition">
+                                    <span class="font_size">Discount</span>
+                                    <span class="spanInput" id="id_discount"></span>
+                                </div>
+                                <div class="shippingfeediv setPosition">
+                                    <span class="font_size">Shipping Fee</span>
+                                    <span class="spanInput" id="id_shipping"></span>
+                                </div>
+                            </div>
+                            <!--subTotal-div-->
+                            <div class="note-div">
+                                <span class="notediv">NOTES</span>
+                                <span class="disclamer">Pay within 15 days. Thank you for your Business</span>
+                            </div>
+                            <!--note-div-->
+                        </div>
+                        <!--invoiceCopy-->
+                        <div class="blue-div">
+                            <div class="totalDetails">
+                                <div class="invoiceDetailDiv">
+                                    <span class="invoice">Invoice Details</span>
+                                    <div class="issued_date_Details_Div date_details">
+                                        <Span class="set-size-of-date">Date Issued</Span>
+                                        <span class="date-size" id="id_issued_date"></span>
+                                    </div>
+                                    <div class="due_date_details_Div date_details">
+                                        <span class="set-size-of-date">Due Date</span>
+                                        <span class="date-size" id="id_due-date"></span>
+                                    </div>
+                                </div>
+                                <div class="total_Aount_Details_div">
+                                    <span class="classTotalAmount">Total Amount</span>
+                                    <span class="totalAmountSpan" id="id_total_amount"></span>
+                                </div>
                             </div>
                         </div>
+                        <!--blue-div-->
                     </div>
-                    <!--blue-div-->
                     <div class="buttonDiv">
                         <button id="download" href="#">Save</button>
                         <button class="send">Save and Send</button>
@@ -333,7 +335,7 @@
         integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="script.js"></script>
-    
+
 </body>
 
 </html>
