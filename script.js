@@ -208,27 +208,31 @@ function getDate(){
 $(document).ready(function () {
     var element = $("#screenShot")[0];
 
-    // hide hightlish here
-    $("#hide").css({ "background-color" : "transparent" })
-    $("#companyDetail").hide();
-    $("#hide1").css({"background-color" : "transparent"})
-    $("#billTo").hide();
-
     $("#download").on("click", function () {
 
-        // show hightlight here
-        $("#hide").css({ "background-color" : "#daeefe" })
-        $("#companyDetail").show();
-        $("#hide1").css({"background-color" : "#daeefe"})
-        $("#billTo").show();
+        // hide hightlish here
+        $("#hide").css({ "background-color" : "transparent", "border": "transparent"});
+        $("#hide1").css({"background-color" : "transparent", "border": "transparent" });
+        // $("#companyDetail").hide();
+        // $("#billTo").hide();
+       
 
+        // syncronous function 
+
+
+        // asyncronous function 
         html2canvas(element).then((canvas) => {
             
+           var newData = imageData.replace('/^data:image\/webp', "data:application/octet-stream");
             var imageData = canvas.toDataURL("image/webp");
-            var newData = imageData.replace('/^data:image\/webp', "data:application/octet-stream");
-           
+            
             saveAs(newData, Math.floor((new Date() / 1000)).toString() + ".webp" );
             
+             // show hightlight here
+            $("#hide").css({ "background-color" : "#daeefe" , "border" :"1px solid #3a68fe" });
+            $("#hide1").css({"background-color" : "#daeefe", "border" : "1px solid #3a68fe"});
+            // $("#companyDetail").show();
+            // $("#billTo").show();
         });
     })
 });
