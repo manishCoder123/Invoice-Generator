@@ -1,5 +1,7 @@
 This project is an Invoice Generator application developed using JavaScript, HTML, and CSS. It allows users to dynamically add invoice rows and automatically calculates the total amount based on the quantity and price of items. The user-friendly interface ensures a seamless experience for generating professional invoices.
 
+
+
 ****Features****
 
 1-Dynamic Row Addition: Easily add new rows for items with a single click.
@@ -12,9 +14,13 @@ This project is an Invoice Generator application developed using JavaScript, HTM
 
 5-Input Validation: Ensures all required fields are filled out correctly before generating the invoice.
 
+
+
 **Technologies Used**
 
 1-Front-end: JavaScript, HTML, CSS
+
+
 
 1-Installation
 
@@ -27,6 +33,8 @@ git clone [https://github.com/your-username/invoice-generator.git](https://manis
 cd invoice-generator
 
 3-Open the index.html file in your web browser to start using the application.
+
+
 
 
 **Usage**
