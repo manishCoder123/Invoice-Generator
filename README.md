@@ -1,6 +1,8 @@
 This project is an Invoice Generator application developed using JavaScript, HTML, and CSS. It allows users to dynamically add invoice rows and automatically calculates the total amount based on the quantity and price of items. The user-friendly interface ensures a seamless experience for generating professional invoices.
 
 ****Features****
+
+
 1-Dynamic Row Addition: Easily add new rows for items with a single click.
 2-Automatic Calculations: Automatically calculates and updates the subtotal, tax, discount, shipping fee, and total amount based on the quantity and rate of items.
 3-Responsive Design: Ensures a smooth experience across different devices and screen sizes.
