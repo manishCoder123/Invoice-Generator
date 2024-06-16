@@ -1,3 +1,6 @@
+![Screenshot 2024-06-14 231100](https://github.com/manishCoder123/Invoice-Generator/assets/137485898/6e2539fa-6a2a-4e83-81f4-7aa275ee054d)
+
+
 This project is an Invoice Generator application developed using JavaScript, HTML, and CSS. It allows users to dynamically add invoice rows and automatically calculates the total amount based on the quantity and price of items. The user-friendly interface ensures a seamless experience for generating professional invoices.
 
 
@@ -52,4 +55,3 @@ cd invoice-generator
 6-Click "Save" to save the invoice or "Save and Send" to save and send the invoice.
 
 
-![Screenshot 2024-06-14 231100](https://github.com/manishCoder123/Invoice-Generator/assets/137485898/6e2539fa-6a2a-4e83-81f4-7aa275ee054d)
