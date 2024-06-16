@@ -50,3 +50,6 @@ cd invoice-generator
 5-The application will automatically calculate the subtotal, tax, discount, shipping fee, and total amount.
 
 6-Click "Save" to save the invoice or "Save and Send" to save and send the invoice.
+
+
+![Screenshot 2024-06-14 231100](https://github.com/manishCoder123/Invoice-Generator/assets/137485898/6e2539fa-6a2a-4e83-81f4-7aa275ee054d)
